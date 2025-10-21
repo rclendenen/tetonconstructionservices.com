@@ -12,21 +12,21 @@ const projects = [
     category: 'Residential',
     location: 'Mansfield, TX',
     description: 'Complete renovation of a 2,400 sq ft family home with updated kitchen, baths, and fresh exterior.',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&w=800&q=80',
     tags: ['Renovation', 'Family Home', 'Remodel']
   },
   {
-    title: 'Ranch Home Remodel',
+    title: 'Brick Home Update',
     category: 'Residential',
-    location: 'Fort Worth, TX',
-    description: 'Updated Texas ranch-style home with new siding, landscaping, and modern interior finishes.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-    tags: ['Remodel', 'Ranch', 'Exterior']
+    location: 'Mansfield, TX',
+    description: 'Traditional brick home with updated landscaping, new front door, and modern interior finishes.',
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80',
+    tags: ['Remodel', 'Brick Home', 'Exterior']
   },
   {
     title: 'Home Addition Project',
     category: 'Residential',
-    location: 'Arlington, TX',
+    location: 'Mansfield, TX',
     description: 'Added master suite and updated existing home with fresh paint and modern fixtures.',
     image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80',
     tags: ['Addition', 'Expansion', 'Remodel']
@@ -34,7 +34,7 @@ const projects = [
   {
     title: 'Kitchen & Bath Remodel',
     category: 'Residential',
-    location: 'Grand Prairie, TX',
+    location: 'Mansfield, TX',
     description: 'Updated kitchen with new cabinets, countertops, and modern appliances plus refreshed bathrooms.',
     image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80',
     tags: ['Remodel', 'Kitchen', 'Bath']
@@ -42,18 +42,18 @@ const projects = [
   {
     title: 'Whole Home Renovation',
     category: 'Residential',
-    location: 'Grapevine, TX',
+    location: 'Mansfield, TX',
     description: 'Complete interior and exterior refresh with new flooring, paint, and updated fixtures throughout.',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80',
     tags: ['Renovation', 'Full Home', 'Interior']
   },
   {
-    title: 'Exterior Refresh',
+    title: 'Curb Appeal Upgrade',
     category: 'Residential',
-    location: 'Midlothian, TX',
-    description: 'New siding, updated front porch, and landscaping transformed this suburban home.',
-    image: 'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?auto=format&fit=crop&w=800&q=80',
-    tags: ['Exterior', 'Remodel', 'Curb Appeal']
+    location: 'Mansfield, TX',
+    description: 'New landscaping, updated front porch, and fresh paint transformed this traditional home.',
+    image: 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80',
+    tags: ['Exterior', 'Landscaping', 'Curb Appeal']
   }
 ]
 

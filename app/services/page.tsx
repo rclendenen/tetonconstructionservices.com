@@ -131,8 +131,8 @@ export default function ServicesPage() {
 
           <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=1200&q=80"
-              alt="Texas suburban home exterior"
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+              alt="Mansfield home exterior"
               fill
               className="object-cover"
             />
@@ -213,8 +213,8 @@ export default function ServicesPage() {
 
           <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
-              alt="Remodeled suburban home"
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
+              alt="Updated Mansfield home"
               fill
               className="object-cover"
             />
