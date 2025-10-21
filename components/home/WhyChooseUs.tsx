@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { FaCheckCircle } from 'react-icons/fa'
 
@@ -13,17 +16,34 @@ const benefits = [
 ]
 
 export default function WhyChooseUs() {
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative h-96 lg:h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
-            <Image
-              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80"
-              alt="Mansfield area home renovation"
-              fill
-              className="object-cover"
-            />
+            <div
+              style={{
+                transform: `translateY(${(scrollY - 1000) * 0.15}px)`
+              }}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80"
+                alt="Mansfield area home renovation"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div>
