@@ -50,12 +50,11 @@ const testimonials = [
 
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
 
-  const scrollToIndex = (index: number) => {
+  const scrollToIndex = (index: number): void => {
     if (scrollRef.current) {
       const scrollWidth = scrollRef.current.scrollWidth
-      const clientWidth = scrollRef.current.clientWidth
       const scrollPosition = (scrollWidth / testimonials.length) * index
       scrollRef.current.scrollTo({ left: scrollPosition, behavior: 'smooth' })
       setCurrentIndex(index)
