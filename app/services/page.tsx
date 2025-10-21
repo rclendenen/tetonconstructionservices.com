@@ -4,7 +4,7 @@ import { FaHome, FaBuilding, FaTools, FaPaintRoller, FaWarehouse, FaCheckCircle 
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'Comprehensive residential and commercial construction services in the DFW area. From new builds to renovations, we deliver excellence.',
+  description: 'Comprehensive residential and commercial construction services in Mansfield and the DFW area. From roofing and remodeling to office build-outs and retail spaces, we deliver excellence.',
 }
 
 const residentialServices = [
@@ -42,6 +42,29 @@ const residentialServices = [
   }
 ]
 
+const commercialServices = [
+  {
+    title: 'Office Build-Outs',
+    description: 'Create professional, functional workspaces tailored to your business needs.',
+    features: ['Open floor plans', 'Private offices', 'Conference rooms', 'Break areas']
+  },
+  {
+    title: 'Retail Spaces',
+    description: 'Build attractive retail spaces that draw customers and enhance your brand.',
+    features: ['Storefront design', 'Interior layouts', 'Display fixtures', 'Customer flow optimization']
+  },
+  {
+    title: 'Restaurant Construction',
+    description: 'Specialized construction for food service establishments with all necessary systems.',
+    features: ['Commercial kitchens', 'Dining areas', 'Bar installations', 'Health code compliance']
+  },
+  {
+    title: 'Warehouse & Industrial',
+    description: 'Durable construction for industrial and warehouse facilities.',
+    features: ['Loading docks', 'Storage systems', 'Office integration', 'Safety features']
+  }
+]
+
 const additionalServices = [
   {
     title: 'Concrete Work',
@@ -76,7 +99,7 @@ export default function ServicesPage() {
             Comprehensive Construction Services
           </h1>
           <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl">
-            Serving Mansfield and the DFW area since 2005. From small repairs to full renovations—plus 24-hour emergency services.
+            Serving Mansfield and the DFW area since 2005. Residential and commercial construction—plus 24-hour emergency services.
           </p>
         </div>
       </section>
@@ -127,8 +150,49 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Additional Services */}
+      {/* Commercial Services */}
       <section className="py-20 bg-neutral-50">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-100 text-accent-600 mb-4">
+              <FaBuilding className="w-8 h-8" />
+            </div>
+            <h2 className="section-title">Commercial Services</h2>
+            <p className="section-subtitle mx-auto">
+              Professional construction solutions for businesses of all sizes
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {commercialServices.map((service, index) => (
+              <div key={index} className="card p-8 bg-white">
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-neutral-600 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <FaCheckCircle className="w-5 h-5 text-accent-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-neutral-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
+            <Image
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+              alt="Modern commercial office space"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-forest-100 text-forest-600 mb-4">
