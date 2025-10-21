@@ -22,7 +22,13 @@ export default function Footer() {
               Building excellence in the DFW area since 2005. Your trusted partner for residential and commercial construction.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
+              <a 
+                href="https://www.facebook.com/profile.php?id=100049266175557" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors"
+                aria-label="Visit our Facebook page"
+              >
                 <FaFacebookF className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
