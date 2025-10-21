@@ -37,19 +37,19 @@ export default function ContactPage() {
 
               <div className="space-y-6 mb-12">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-forest-100 text-forest-600 flex items-center justify-center">
                     <FaPhone className="w-5 h-5" />
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                    <a href="tel:+1234567890" className="text-neutral-600 hover:text-primary-600 transition-colors">
-                      (817) 555-0123
-                    </a>
-                  </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold mb-1">Phone</h3>
+                  <a href="tel:+19728249066" className="text-neutral-600 hover:text-forest-600 transition-colors">
+                    (972) 824-9066
+                  </a>
+                </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-forest-100 text-forest-600 flex items-center justify-center">
                     <FaEnvelope className="w-5 h-5" />
                   </div>
                   <div className="ml-4">
@@ -61,7 +61,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-forest-100 text-forest-600 flex items-center justify-center">
                     <FaMapMarkerAlt className="w-5 h-5" />
                   </div>
                   <div className="ml-4">
@@ -74,7 +74,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-forest-100 text-forest-600 flex items-center justify-center">
                     <FaClock className="w-5 h-5" />
                   </div>
                   <div className="ml-4">

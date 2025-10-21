@@ -63,11 +63,11 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="tel:+1234567890"
+              href="tel:+19728249066"
               className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-forest-500 to-accent-600 text-white font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-md"
             >
               <FaPhone className="w-4 h-4 mr-2" />
-              (817) 555-0123
+              (972) 824-9066
             </a>
           </div>
 
@@ -104,11 +104,11 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href="tel:+1234567890"
+                href="tel:+19728249066"
                 className="inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-forest-500 to-accent-600 text-white font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 mx-4 shadow-md"
               >
                 <FaPhone className="w-4 h-4 mr-2" />
-                (817) 555-0123
+                (972) 824-9066
               </a>
             </div>
           </div>

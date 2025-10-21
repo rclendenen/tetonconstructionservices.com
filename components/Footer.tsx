@@ -83,20 +83,20 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <FaMapMarkerAlt className="w-5 h-5 mr-3 mt-1 text-primary-600 flex-shrink-0" />
+                <FaMapMarkerAlt className="w-5 h-5 mr-3 mt-1 text-forest-500 flex-shrink-0" />
                 <span className="text-neutral-400">
                   Mansfield, TX<br />
                   Serving Greater DFW
                 </span>
               </li>
               <li className="flex items-center">
-                <FaPhone className="w-5 h-5 mr-3 text-primary-600 flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-neutral-400 hover:text-white transition-colors">
-                  (817) 555-0123
+                <FaPhone className="w-5 h-5 mr-3 text-forest-500 flex-shrink-0" />
+                <a href="tel:+19728249066" className="text-neutral-400 hover:text-white transition-colors">
+                  (972) 824-9066
                 </a>
               </li>
               <li className="flex items-center">
-                <FaEnvelope className="w-5 h-5 mr-3 text-primary-600 flex-shrink-0" />
+                <FaEnvelope className="w-5 h-5 mr-3 text-forest-500 flex-shrink-0" />
                 <a href="mailto:info@tetonconstructionservices.com" className="text-neutral-400 hover:text-white transition-colors">
                   info@tetonconstructionservices.com
                 </a>

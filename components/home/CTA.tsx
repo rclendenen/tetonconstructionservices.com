@@ -30,11 +30,11 @@ export default function CTA() {
               Request a Quote
             </Link>
             <a
-              href="tel:+1234567890"
+              href="tel:+19728249066"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-forest-600 transition-all duration-200"
             >
               <FaPhone className="w-5 h-5 mr-2" />
-              (817) 555-0123
+              (972) 824-9066
             </a>
           </div>
 
