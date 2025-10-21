@@ -1,4 +1,7 @@
-import { FaStar, FaQuoteLeft } from 'react-icons/fa'
+'use client'
+
+import { useState, useRef } from 'react'
+import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 const testimonials = [
   {
@@ -46,6 +49,29 @@ const testimonials = [
 ]
 
 export default function Testimonials() {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const scrollToIndex = (index: number) => {
+    if (scrollRef.current) {
+      const scrollWidth = scrollRef.current.scrollWidth
+      const clientWidth = scrollRef.current.clientWidth
+      const scrollPosition = (scrollWidth / testimonials.length) * index
+      scrollRef.current.scrollTo({ left: scrollPosition, behavior: 'smooth' })
+      setCurrentIndex(index)
+    }
+  }
+
+  const scrollLeft = () => {
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : testimonials.length - 1
+    scrollToIndex(newIndex)
+  }
+
+  const scrollRight = () => {
+    const newIndex = currentIndex < testimonials.length - 1 ? currentIndex + 1 : 0
+    scrollToIndex(newIndex)
+  }
+
   return (
     <section className="py-12 md:py-20 bg-neutral-50">
       <div className="container-custom">
@@ -59,9 +85,30 @@ export default function Testimonials() {
         {/* Mobile: Swipeable carousel, Tablet/Desktop: Grid */}
         <div className="relative">
           {/* Mobile Carousel - Swipe through */}
-          <div className="lg:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            <div className="flex gap-4 px-4">
-              {testimonials.map((testimonial, index) => (
+          <div className="lg:hidden">
+            {/* Navigation Arrows */}
+            <button
+              onClick={scrollLeft}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg"
+              aria-label="Previous review"
+            >
+              <FaChevronLeft className="w-4 h-4 text-forest-600" />
+            </button>
+            <button
+              onClick={scrollRight}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg"
+              aria-label="Next review"
+            >
+              <FaChevronRight className="w-4 h-4 text-forest-600" />
+            </button>
+
+            <div 
+              ref={scrollRef}
+              className="overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" 
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              <div className="flex gap-4 px-4">
+                {testimonials.map((testimonial, index) => (
                 <div key={index} className="snap-center flex-shrink-0 w-[85vw] md:w-[45vw]">
                   <div className="card p-6 bg-white h-full">
                     <div className="flex items-center mb-3">
@@ -82,6 +129,20 @@ export default function Testimonials() {
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+          
+            {/* Carousel Dots */}
+            <div className="flex justify-center gap-2 mt-4">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentIndex ? 'bg-forest-600 w-6' : 'bg-neutral-300'
+                  }`}
+                  aria-label={`Go to review ${index + 1}`}
+                />
               ))}
             </div>
           </div>
