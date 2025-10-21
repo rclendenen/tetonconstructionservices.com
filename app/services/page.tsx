@@ -49,19 +49,9 @@ const commercialServices = [
     features: ['Open floor plans', 'Private offices', 'Conference rooms', 'Break areas']
   },
   {
-    title: 'Retail Spaces',
-    description: 'Build attractive retail spaces that draw customers and enhance your brand.',
-    features: ['Storefront design', 'Interior layouts', 'Display fixtures', 'Customer flow optimization']
-  },
-  {
-    title: 'Restaurant Construction',
-    description: 'Specialized construction for food service establishments with all necessary systems.',
-    features: ['Commercial kitchens', 'Dining areas', 'Bar installations', 'Health code compliance']
-  },
-  {
-    title: 'Warehouse & Industrial',
-    description: 'Durable construction for industrial and warehouse facilities.',
-    features: ['Loading docks', 'Storage systems', 'Office integration', 'Safety features']
+    title: 'Commercial Roofing',
+    description: 'Professional roofing services for commercial buildings including repairs, replacements, and emergency services.',
+    features: ['Flat roof systems', 'TPO & EPDM roofing', 'Emergency leak repairs', 'Preventive maintenance']
   }
 ]
 

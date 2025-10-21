@@ -40,9 +40,9 @@ export default function Header() {
             <Image
               src="/logo.jpg"
               alt="Teton Construction"
-              width={180}
-              height={60}
-              className="h-14 w-auto"
+              width={240}
+              height={80}
+              className="h-20 w-auto"
               priority
             />
           </Link>
