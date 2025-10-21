@@ -104,8 +104,7 @@ export default function Testimonials() {
 
             <div 
               ref={scrollRef}
-              className="overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" 
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              className="overflow-x-auto snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" 
             >
               <div className="flex gap-4 px-4">
                 {testimonials.map((testimonial, index) => (
@@ -198,12 +197,6 @@ export default function Testimonials() {
           </a>
         </div>
       </div>
-
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   )
 }
