@@ -57,14 +57,14 @@ export default function Services() {
               key={index}
               className="card p-8 hover:scale-105 transition-transform duration-300 group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-forest-100 to-accent-100 text-forest-600 mb-6 group-hover:bg-gradient-to-br group-hover:from-forest-500 group-hover:to-accent-500 group-hover:text-white transition-all duration-300">
                 <service.icon className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-neutral-600 mb-4">{service.description}</p>
               <Link
                 href={service.link}
-                className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                className="inline-flex items-center text-forest-600 font-medium hover:text-accent-600 transition-colors"
               >
                 Learn More
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

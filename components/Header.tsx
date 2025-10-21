@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary-600">
+            <div className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-sunshine-500 bg-clip-text text-transparent">
               Teton
             </div>
             <div className="text-2xl font-light text-neutral-800">
@@ -52,8 +52,8 @@ export default function Header() {
                 href={item.href}
                 className={`text-base font-medium transition-colors duration-200 ${
                   pathname === item.href
-                    ? 'text-primary-600'
-                    : 'text-neutral-700 hover:text-primary-600'
+                    ? 'text-forest-500 font-semibold'
+                    : 'text-neutral-700 hover:text-forest-500'
                 }`}
               >
                 {item.name}
@@ -61,7 +61,7 @@ export default function Header() {
             ))}
             <a
               href="tel:+1234567890"
-              className="inline-flex items-center px-5 py-2.5 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition-colors duration-200"
+              className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-forest-500 to-accent-600 text-white font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-md"
             >
               <FaPhone className="w-4 h-4 mr-2" />
               (817) 555-0123
@@ -90,10 +90,10 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-base font-medium px-4 py-2 rounded-md transition-colors duration-200 ${
+                  className={`text-base font-medium px-4 py-2 rounded-lg transition-colors duration-200 ${
                     pathname === item.href
-                      ? 'bg-primary-50 text-primary-600'
-                      : 'text-neutral-700 hover:bg-neutral-50'
+                      ? 'bg-forest-50 text-forest-600 font-semibold'
+                      : 'text-neutral-700 hover:bg-neutral-100'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -102,7 +102,7 @@ export default function Header() {
               ))}
               <a
                 href="tel:+1234567890"
-                className="inline-flex items-center justify-center px-5 py-2.5 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition-colors duration-200 mx-4"
+                className="inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-forest-500 to-accent-600 text-white font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 mx-4 shadow-md"
               >
                 <FaPhone className="w-4 h-4 mr-2" />
                 (817) 555-0123

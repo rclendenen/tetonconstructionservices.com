@@ -30,7 +30,7 @@ export default function TrustBadges() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {badges.map((badge, index) => (
             <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-100 text-primary-600 mb-4">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-forest-100 to-accent-100 text-forest-600 mb-4">
                 <badge.icon className="w-7 h-7" />
               </div>
               <h3 className="font-bold text-lg mb-2">{badge.title}</h3>

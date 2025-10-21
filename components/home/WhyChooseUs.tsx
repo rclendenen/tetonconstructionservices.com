@@ -36,13 +36,13 @@ export default function WhyChooseUs() {
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start">
-                  <FaCheckCircle className="w-6 h-6 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <FaCheckCircle className="w-6 h-6 text-accent-600 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-neutral-700">{benefit}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-8 p-6 bg-primary-50 rounded-lg border-l-4 border-primary-600">
+            <div className="mt-8 p-6 bg-gradient-to-r from-forest-50 to-accent-50 rounded-lg border-l-4 border-forest-500">
               <p className="text-lg font-medium text-neutral-900">
                 "We don't just build structures – we build lasting relationships with our clients 
                 and partners. Your satisfaction is our success."
