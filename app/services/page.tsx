@@ -20,7 +20,7 @@ const residentialServices = [
   },
   {
     title: 'Home Additions',
-    description: 'Expand your living space seamlessly with additions that match your home's existing style.',
+    description: 'Expand your living space seamlessly with additions that match your home\'s existing style.',
     features: ['Second-story additions', 'Garage conversions', 'Sunrooms', 'In-law suites']
   },
   {
