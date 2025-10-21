@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope } from 'react-icons/fa'
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-gradient-to-br from-forest-600 via-accent-600 to-accent-500 text-white relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-forest-600 via-accent-600 to-accent-500 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

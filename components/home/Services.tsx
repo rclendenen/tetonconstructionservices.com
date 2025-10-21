@@ -44,9 +44,9 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle mx-auto">
             Quality craftsmanship for homes throughout Mansfield and the DFW area—including 24-hour emergency services
@@ -82,7 +82,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 md:mt-12">
           <Link href="/services" className="btn-primary">
             View All Services
           </Link>

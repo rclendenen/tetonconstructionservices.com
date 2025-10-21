@@ -47,51 +47,83 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-neutral-50">
+    <section className="py-12 md:py-20 bg-neutral-50">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="section-title">What Our Clients Say</h2>
           <p className="section-subtitle mx-auto">
             Don't just take our word for it – hear from our satisfied clients
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="card p-8 bg-white">
-              <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <FaStar key={i} className="w-5 h-5 text-yellow-400" />
-                ))}
-              </div>
-              
-              <FaQuoteLeft className="w-8 h-8 text-primary-200 mb-4" />
-              
-              <p className="text-neutral-700 mb-6 italic">
-                "{testimonial.text}"
-              </p>
-              
-              <div className="pt-4 border-t border-neutral-200">
-                <p className="font-bold text-neutral-900">{testimonial.name}</p>
-                <p className="text-sm text-forest-600 font-medium mt-1">{testimonial.project}</p>
-              </div>
+        {/* Mobile: Swipeable carousel, Tablet/Desktop: Grid */}
+        <div className="relative">
+          {/* Mobile Carousel - Swipe through */}
+          <div className="lg:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            <div className="flex gap-4 px-4">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="snap-center flex-shrink-0 w-[85vw] md:w-[45vw]">
+                  <div className="card p-6 bg-white h-full">
+                    <div className="flex items-center mb-3">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <FaStar key={i} className="w-4 h-4 text-yellow-400" />
+                      ))}
+                    </div>
+                    
+                    <FaQuoteLeft className="w-6 h-6 text-primary-200 mb-3" />
+                    
+                    <p className="text-neutral-700 mb-4 italic text-sm">
+                      "{testimonial.text}"
+                    </p>
+                    
+                    <div className="pt-3 border-t border-neutral-200">
+                      <p className="font-bold text-neutral-900 text-sm">{testimonial.name}</p>
+                      <p className="text-xs text-forest-600 font-medium mt-1">{testimonial.project}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Desktop Grid - Show 3 at once */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="card p-6 bg-white">
+                <div className="flex items-center mb-3">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <FaStar key={i} className="w-4 h-4 text-yellow-400" />
+                  ))}
+                </div>
+                
+                <FaQuoteLeft className="w-6 h-6 text-primary-200 mb-3" />
+                
+                <p className="text-neutral-700 mb-4 italic text-sm">
+                  "{testimonial.text}"
+                </p>
+                
+                <div className="pt-3 border-t border-neutral-200">
+                  <p className="font-bold text-neutral-900 text-sm">{testimonial.name}</p>
+                  <p className="text-xs text-forest-600 font-medium mt-1">{testimonial.project}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-          <div className="inline-flex items-center bg-white rounded-lg shadow-md px-8 py-4">
-            <div className="mr-6">
-              <div className="text-4xl font-bold text-primary-600">4.9</div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mt-8 md:mt-12">
+          <div className="inline-flex items-center bg-white rounded-lg shadow-md px-6 py-3">
+            <div className="mr-4">
+              <div className="text-3xl md:text-4xl font-bold text-primary-600">4.9</div>
               <div className="flex items-center mt-1">
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="w-4 h-4 text-yellow-400" />
+                  <FaStar key={i} className="w-3 h-3 md:w-4 md:h-4 text-yellow-400" />
                 ))}
               </div>
             </div>
             <div className="text-left">
-              <p className="font-semibold text-neutral-900">Excellent Rating</p>
-              <p className="text-sm text-neutral-600">Based on 200+ reviews</p>
+              <p className="font-semibold text-neutral-900 text-sm md:text-base">Excellent Rating</p>
+              <p className="text-xs md:text-sm text-neutral-600">Based on 200+ reviews</p>
             </div>
           </div>
 
@@ -99,12 +131,18 @@ export default function Testimonials() {
             href="https://www.google.com/search?q=teton+construction+services+mansfield+tx"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-forest-500 to-accent-600 text-white text-lg font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-forest-500 to-accent-600 text-white text-base md:text-lg font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Leave a Review
           </a>
         </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   )
 }
