@@ -11,19 +11,19 @@
     scroll-behavior: smooth;
   }
   
-body {
-  @apply bg-neutral-50 text-neutral-900;
-}
+  body {
+    @apply bg-neutral-50 text-neutral-900;
+  }
 
-/* Hide scrollbar for carousel */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
+  /* Hide scrollbar for carousel */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @layer components {

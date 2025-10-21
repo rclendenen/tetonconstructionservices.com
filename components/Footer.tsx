@@ -83,11 +83,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-neutral-400">
-              <li>Custom Home Building</li>
+              <li>24/7 Emergency Services</li>
+              <li>Roofing & Tarping</li>
+              <li>Garage Door Repair</li>
               <li>Home Renovations</li>
-              <li>Commercial Construction</li>
               <li>Office Build-Outs</li>
-              <li>Retail Construction</li>
             </ul>
           </div>
 
