@@ -21,7 +21,7 @@ export default function ContactPage() {
             Ready to start your project? Need emergency services? We're here to help 24/7.
           </p>
           <div className="inline-block bg-red-500 text-white px-6 py-3 rounded-lg">
-            <p className="text-lg font-bold">🚨 24-Hour Emergency: (972) 824-9066</p>
+            <p className="text-lg font-bold">24-Hour Emergency: (972) 824-9066</p>
           </div>
         </div>
       </section>
@@ -83,10 +83,11 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold mb-1">Business Hours</h3>
-                    <p className="text-neutral-600">
-                      Monday - Friday: 8:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 2:00 PM<br />
-                      Sunday: Closed
+                    <p className="text-neutral-600 font-semibold">
+                      24/7 Availability
+                    </p>
+                    <p className="text-red-600 font-semibold mt-2">
+                      Emergency services available anytime
                     </p>
                   </div>
                 </div>
@@ -114,7 +115,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
-                    Licensed & Insured
+                    7 Dedicated Team Members
                   </li>
                 </ul>
               </div>

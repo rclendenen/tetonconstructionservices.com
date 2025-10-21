@@ -38,7 +38,7 @@ export default function Hero() {
           
           <div className="bg-red-500 text-white px-6 py-4 rounded-lg mb-8 max-w-2xl inline-block">
             <p className="text-lg md:text-xl font-bold">
-              🚨 24-Hour Emergency Services Available
+              24-Hour Emergency Services Available
             </p>
             <p className="text-sm md:text-base">
               Emergency roofing tarping & garage door repair

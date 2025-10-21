@@ -20,7 +20,7 @@ export default function CTA() {
             Let's bring your vision to life. BBB A+ rated and referral-only—serving Mansfield and the DFW area since 2005.
           </p>
           <p className="text-lg text-white/80 mb-12">
-            🚨 24-hour emergency roofing tarping and garage door services available
+            24-hour emergency roofing tarping and garage door services available
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

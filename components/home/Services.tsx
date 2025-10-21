@@ -12,7 +12,7 @@ const services = [
   {
     icon: FaDoorOpen,
     title: 'Garage Door Services',
-    description: '24-hour emergency garage door repair and replacement, plus metal gate motor repair.',
+    description: '24-hour emergency garage door repair and replacement, plus electric gate operators installation and repair.',
     link: '/services',
     emergency: true
   },

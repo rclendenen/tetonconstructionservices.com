@@ -95,6 +95,17 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
+
+        <div className="text-center mt-8">
+          <a
+            href="https://www.google.com/search?q=teton+construction+services+mansfield+tx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-forest-500 to-accent-600 text-white text-lg font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            Leave a Review
+          </a>
+        </div>
       </div>
     </section>
   )

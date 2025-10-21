@@ -125,7 +125,7 @@ export default function Footer() {
                 Terms of Service
               </a>
               <span className="text-neutral-400">
-                A+ BBB Rated | Licensed & Insured
+                A+ BBB Rated | Serving Mansfield & DFW Since 2005
               </span>
             </div>
           </div>

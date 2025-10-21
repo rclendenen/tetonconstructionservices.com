@@ -13,8 +13,8 @@ const badges = [
   },
   {
     icon: FaShieldAlt,
-    title: 'Licensed & Insured',
-    description: 'Fully licensed, bonded, and insured for your protection'
+    title: 'BBB A+ Rated',
+    description: 'A+ rating with the Better Business Bureau since 2005'
   },
   {
     icon: FaUsers,

@@ -17,7 +17,7 @@ const residentialServices = [
   {
     title: 'Garage Door Services',
     description: '24-hour emergency garage door repair and replacement services for your security and convenience.',
-    features: ['24-hour emergency service', 'Garage door repair', 'New installation', 'Metal gate motor repair'],
+    features: ['24-hour emergency service', 'Garage door repair', 'New installation', 'Electric gate operators installation and repair'],
     emergency: true
   },
   {
@@ -61,7 +61,7 @@ const additionalServices = [
   {
     title: 'Specialty Services',
     description: 'Additional services to complete your home improvement needs.',
-    features: ['Attic ladders', 'Attic elevators', 'Masonry work', 'Metal gate motor repair']
+    features: ['Attic ladders', 'Attic elevators', 'Masonry work', 'Electric gate operators installation and repair']
   }
 ]
 
