@@ -51,8 +51,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
-                alt="Beautiful residential home"
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                alt="Renovated Texas suburban home"
                 fill
                 className="object-cover"
               />

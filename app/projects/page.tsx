@@ -8,52 +8,52 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: 'Modern Family Home',
+    title: 'Suburban Home Renovation',
     category: 'Residential',
     location: 'Mansfield, TX',
-    description: 'Custom-built 3,500 sq ft modern home with open floor plan and luxury finishes.',
-    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80',
-    tags: ['New Build', 'Custom Home', 'Modern']
+    description: 'Complete renovation of a 2,400 sq ft family home with updated kitchen, baths, and fresh exterior.',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
+    tags: ['Renovation', 'Family Home', 'Remodel']
   },
   {
-    title: 'Historic Home Renovation',
+    title: 'Ranch Home Remodel',
     category: 'Residential',
     location: 'Fort Worth, TX',
-    description: 'Complete renovation of a 1920s craftsman home, preserving historic character while adding modern amenities.',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',
-    tags: ['Renovation', 'Historic', 'Craftsman']
+    description: 'Updated Texas ranch-style home with new siding, landscaping, and modern interior finishes.',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+    tags: ['Remodel', 'Ranch', 'Exterior']
   },
   {
-    title: 'Home Addition & Expansion',
+    title: 'Home Addition Project',
     category: 'Residential',
     location: 'Arlington, TX',
-    description: 'Two-story addition with master suite, walk-in closet, and luxury bathroom with modern finishes.',
-    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80',
+    description: 'Added master suite and updated existing home with fresh paint and modern fixtures.',
+    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80',
     tags: ['Addition', 'Expansion', 'Remodel']
   },
   {
-    title: 'Luxury Kitchen Remodel',
+    title: 'Kitchen & Bath Remodel',
     category: 'Residential',
-    location: 'Southlake, TX',
-    description: 'High-end kitchen renovation featuring custom cabinetry, quartz countertops, and professional appliances.',
-    image: 'https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=800&q=80',
-    tags: ['Remodel', 'Kitchen', 'Luxury']
+    location: 'Grand Prairie, TX',
+    description: 'Updated kitchen with new cabinets, countertops, and modern appliances plus refreshed bathrooms.',
+    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80',
+    tags: ['Remodel', 'Kitchen', 'Bath']
   },
   {
-    title: 'Complete Home Remodel',
+    title: 'Whole Home Renovation',
     category: 'Residential',
     location: 'Grapevine, TX',
-    description: 'Full interior and exterior renovation with updated kitchen, bathrooms, and modern living spaces.',
-    image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=800&q=80',
-    tags: ['Remodel', 'Renovation', 'Full Home']
+    description: 'Complete interior and exterior refresh with new flooring, paint, and updated fixtures throughout.',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
+    tags: ['Renovation', 'Full Home', 'Interior']
   },
   {
-    title: 'Custom Home Build',
+    title: 'Exterior Refresh',
     category: 'Residential',
-    location: 'Colleyville, TX',
-    description: 'New construction custom home with 4 bedrooms, open concept kitchen, and luxury outdoor living space.',
-    image: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80',
-    tags: ['New Build', 'Custom', 'Luxury']
+    location: 'Midlothian, TX',
+    description: 'New siding, updated front porch, and landscaping transformed this suburban home.',
+    image: 'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?auto=format&fit=crop&w=800&q=80',
+    tags: ['Exterior', 'Remodel', 'Curb Appeal']
   }
 ]
 
