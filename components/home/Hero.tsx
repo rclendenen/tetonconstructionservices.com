@@ -8,8 +8,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-sunshine-500 via-primary-500 to-accent-600"></div>
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80"
-          alt="Construction site"
+          src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=2000&q=80"
+          alt="Beautiful residential home construction"
           fill
           className="object-cover opacity-20"
           priority

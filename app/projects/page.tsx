@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Our Projects',
-  description: 'Explore our portfolio of completed residential and commercial construction projects throughout the DFW area.',
+  description: 'Explore our portfolio of completed residential construction projects including custom homes, renovations, and additions throughout the DFW area.',
 }
 
 const projects = [
@@ -12,7 +12,7 @@ const projects = [
     category: 'Residential',
     location: 'Mansfield, TX',
     description: 'Custom-built 3,500 sq ft modern home with open floor plan and luxury finishes.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80',
     tags: ['New Build', 'Custom Home', 'Modern']
   },
   {
@@ -20,16 +20,16 @@ const projects = [
     category: 'Residential',
     location: 'Fort Worth, TX',
     description: 'Complete renovation of a 1920s craftsman home, preserving historic character while adding modern amenities.',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',
     tags: ['Renovation', 'Historic', 'Craftsman']
   },
   {
-    title: 'Corporate Office Build-Out',
-    category: 'Commercial',
+    title: 'Home Addition & Expansion',
+    category: 'Residential',
     location: 'Arlington, TX',
-    description: '15,000 sq ft office space with modern design, collaborative workspaces, and executive offices.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-    tags: ['Office', 'Commercial', 'Build-Out']
+    description: 'Two-story addition with master suite, walk-in closet, and luxury bathroom with modern finishes.',
+    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80',
+    tags: ['Addition', 'Expansion', 'Remodel']
   },
   {
     title: 'Luxury Kitchen Remodel',
@@ -40,20 +40,20 @@ const projects = [
     tags: ['Remodel', 'Kitchen', 'Luxury']
   },
   {
-    title: 'Retail Storefront',
-    category: 'Commercial',
+    title: 'Complete Home Remodel',
+    category: 'Residential',
     location: 'Grapevine, TX',
-    description: 'Complete retail build-out with custom fixtures, lighting design, and storefront facade.',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
-    tags: ['Retail', 'Commercial', 'Storefront']
+    description: 'Full interior and exterior renovation with updated kitchen, bathrooms, and modern living spaces.',
+    image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=800&q=80',
+    tags: ['Remodel', 'Renovation', 'Full Home']
   },
   {
-    title: 'Home Addition & Remodel',
+    title: 'Custom Home Build',
     category: 'Residential',
     location: 'Colleyville, TX',
-    description: 'Two-story addition with master suite expansion and complete first-floor renovation.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-    tags: ['Addition', 'Remodel', 'Expansion']
+    description: 'New construction custom home with 4 bedrooms, open concept kitchen, and luxury outdoor living space.',
+    image: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80',
+    tags: ['New Build', 'Custom', 'Luxury']
   }
 ]
 
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
             Our Projects
           </h1>
           <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl">
-            Explore our portfolio of completed residential and commercial projects throughout the DFW area.
+            Explore our portfolio of completed residential projects including custom homes, renovations, and additions throughout the DFW area.
           </p>
         </div>
       </section>

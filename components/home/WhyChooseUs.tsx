@@ -19,8 +19,8 @@ export default function WhyChooseUs() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-96 lg:h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
-              alt="Construction team"
+              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80"
+              alt="Residential home construction"
               fill
               className="object-cover"
             />
