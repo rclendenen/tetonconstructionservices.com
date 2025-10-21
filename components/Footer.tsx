@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/logo-transparent.jpg"
+                src="/logo.jpg"
                 alt="Teton Construction"
                 width={160}
                 height={53}

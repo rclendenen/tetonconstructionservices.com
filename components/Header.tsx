@@ -38,7 +38,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo-transparent.jpg"
+              src="/logo.jpg"
               alt="Teton Construction"
               width={180}
               height={60}
