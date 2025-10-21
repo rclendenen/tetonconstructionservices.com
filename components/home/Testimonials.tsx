@@ -100,18 +100,13 @@ export default function Testimonials() {
 
             <div 
               ref={scrollRef}
-              className="overflow-x-auto snap-x snap-mandatory pb-4"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              className="overflow-x-scroll snap-x snap-mandatory pb-4 scrollbar-hide"
+              style={{ 
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                WebkitOverflowScrolling: 'touch'
+              }}
             >
-              <style jsx>{`
-                div {
-                  -ms-overflow-style: none;
-                  scrollbar-width: none;
-                }
-                div::-webkit-scrollbar {
-                  display: none;
-                }
-              `}</style>
               <div className="flex gap-4 px-4">
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="snap-center flex-shrink-0 w-[85vw] md:w-[45vw]">
