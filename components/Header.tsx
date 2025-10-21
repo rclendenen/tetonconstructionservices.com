@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
 
@@ -35,13 +36,15 @@ export default function Header() {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-sunshine-500 bg-clip-text text-transparent">
-              Teton
-            </div>
-            <div className="text-2xl font-light text-neutral-800">
-              Construction
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.jpg"
+              alt="Teton Construction"
+              width={180}
+              height={60}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

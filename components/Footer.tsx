@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 
 export default function Footer() {
@@ -8,18 +9,26 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Teton Construction Services</h3>
+            <div className="mb-4">
+              <Image
+                src="/logo.jpg"
+                alt="Teton Construction"
+                width={160}
+                height={53}
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-neutral-400 mb-4">
               Building excellence in the DFW area since 2005. Your trusted partner for residential and commercial construction.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
                 <FaFacebookF className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
                 <FaLinkedinIn className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
                 <FaInstagram className="w-5 h-5" />
               </a>
             </div>
