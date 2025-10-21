@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://tetonconstructionservices.com'),
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     title: 'Teton Construction Services | DFW General Contractor',
     description: 'A+ BBB Rated general contractor serving the DFW area since 2005.',
