@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { SiNextdoor } from 'react-icons/si'
 
 export default function Footer() {
@@ -40,9 +40,6 @@ export default function Footer() {
                 aria-label="Visit our Nextdoor page"
               >
                 <SiNextdoor className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
-                <FaLinkedinIn className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
                 <FaInstagram className="w-5 h-5" />
