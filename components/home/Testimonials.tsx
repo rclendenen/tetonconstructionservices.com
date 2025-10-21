@@ -79,7 +79,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
           <div className="inline-flex items-center bg-white rounded-lg shadow-md px-8 py-4">
             <div className="mr-6">
               <div className="text-4xl font-bold text-primary-600">4.9</div>
@@ -94,9 +94,7 @@ export default function Testimonials() {
               <p className="text-sm text-neutral-600">Based on 200+ reviews</p>
             </div>
           </div>
-        </div>
 
-        <div className="text-center mt-8">
           <a
             href="https://www.google.com/search?q=teton+construction+services+mansfield+tx"
             target="_blank"
