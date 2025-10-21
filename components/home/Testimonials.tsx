@@ -73,8 +73,7 @@ export default function Testimonials() {
               
               <div className="pt-4 border-t border-neutral-200">
                 <p className="font-bold text-neutral-900">{testimonial.name}</p>
-                <p className="text-sm text-neutral-600">{testimonial.location}</p>
-                <p className="text-sm text-primary-600 font-medium mt-1">{testimonial.project}</p>
+                <p className="text-sm text-forest-600 font-medium mt-1">{testimonial.project}</p>
               </div>
             </div>
           ))}
