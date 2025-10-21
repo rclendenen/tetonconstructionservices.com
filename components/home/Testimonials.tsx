@@ -2,46 +2,46 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa'
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    location: 'Mansfield, TX',
-    project: 'Custom Home Build',
+    name: 'Shawna Luetkenhaus',
+    location: 'DFW Area',
+    project: 'Garage Door Repair',
     rating: 5,
-    text: 'Teton Construction exceeded our expectations in every way. From the initial consultation to the final walkthrough, they were professional, responsive, and delivered exceptional quality. Our dream home is now a reality!'
+    text: 'Great experience with garage door repair. Quick to respond, quick to make repairs. Would use again.'
   },
   {
-    name: 'Michael Chen',
-    location: 'Arlington, TX',
-    project: 'Kitchen Renovation',
+    name: 'Trevor Kask',
+    location: 'DFW Area',
+    project: 'Emergency Garage Door Service',
     rating: 5,
-    text: 'We hired Teton for a complete kitchen remodel, and we couldn\'t be happier. They were on time, on budget, and the craftsmanship is outstanding. Highly recommended!'
+    text: 'Teton was able to get to my house same day to work on my door. I was on a tight timeline and they were very accommodating. Would recommend and will call in the future for any future needs.'
   },
   {
-    name: 'Jennifer Martinez',
-    location: 'Fort Worth, TX',
-    project: 'Commercial Office',
+    name: 'Wendy Horton',
+    location: 'DFW Area',
+    project: 'Roof Leak & Ceiling Repair',
     rating: 5,
-    text: 'As a real estate professional, I\'ve worked with Teton Construction on multiple projects. Their reliability and quality are unmatched. They\'re my go-to contractor for all my clients.'
+    text: 'Did a wonderful job repairing a small leak on our roof as well as repairing our living room ceiling. Definitely recommend them!'
   },
   {
-    name: 'Robert Williams',
-    location: 'Southlake, TX',
-    project: 'Home Addition',
+    name: 'Ann B Smith',
+    location: 'DFW Area',
+    project: 'Backyard Concrete Patio Rebuild & Expansion',
     rating: 5,
-    text: 'The team at Teton made our home addition process seamless. They handled everything from permits to final inspection. The new space blends perfectly with our existing home.'
+    text: 'I cannot say enough good things about this company. The owner came out and bid a demo and rebuild/expansion of our backyard concrete patio. Made helpful suggestions, showed up as promised, and the crew was courteous, efficient, and cleaned up when finished. Excellent price with no surprise add-ons.'
   },
   {
-    name: 'David Thompson',
-    location: 'Grapevine, TX',
-    project: 'Retail Build-Out',
+    name: 'Marylie Thompson',
+    location: 'DFW Area',
+    project: 'Kitchen Cabinet Painting & Remodel',
     rating: 5,
-    text: 'Teton Construction completed our retail space ahead of schedule and within budget. Their attention to detail and professional approach made all the difference. Great team to work with!'
+    text: 'After much research we decided to hire Teton Construction Services and we are so glad that we did. They painted all of our cabinets and did an AMAZING job! They were polite, on time, and followed through with everything they promised. Highly recommend them for your renovation needs!'
   },
   {
-    name: 'Emily Rodriguez',
-    location: 'Colleyville, TX',
-    project: 'Whole Home Renovation',
+    name: 'Rachael \'Brown\' Nikl',
+    location: 'DFW Area',
+    project: 'Custom Drawer Repair & Replacement',
     rating: 5,
-    text: 'From start to finish, Teton Construction was amazing. They transformed our outdated home into a modern masterpiece. The flexible payment options were also incredibly helpful.'
+    text: 'I was referred to Reyna and Chance to fix two drawers in my house. They were professional, fast, and reliable—finished in under a week! The craftsmanship looks better than when the builder installed the drawers brand new.'
   }
 ]
 
