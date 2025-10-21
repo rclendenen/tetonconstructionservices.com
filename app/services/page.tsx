@@ -9,47 +9,59 @@ export const metadata: Metadata = {
 
 const residentialServices = [
   {
-    title: 'Custom Home Building',
-    description: 'Build your dream home from the ground up with personalized design and superior craftsmanship.',
-    features: ['Custom floor plans', 'Premium materials', 'Energy-efficient construction', 'Project management']
+    title: 'Roofing & Emergency Tarping',
+    description: 'Complete roofing services with 24-hour emergency tarping available when you need it most.',
+    features: ['24-hour emergency tarping', 'Roof repairs', 'Roof replacement', 'Storm damage response'],
+    emergency: true
   },
   {
-    title: 'Home Renovations',
-    description: 'Transform your existing space with expert renovations that enhance both beauty and functionality.',
-    features: ['Kitchen remodels', 'Bathroom upgrades', 'Room additions', 'Whole-home renovations']
+    title: 'Garage Door Services',
+    description: '24-hour emergency garage door repair and replacement services for your security and convenience.',
+    features: ['24-hour emergency service', 'Garage door repair', 'New installation', 'Metal gate motor repair'],
+    emergency: true
   },
   {
-    title: 'Home Additions',
-    description: 'Expand your living space seamlessly with additions that match your home\'s existing style.',
-    features: ['Second-story additions', 'Garage conversions', 'Sunrooms', 'In-law suites']
+    title: 'Remodeling & Renovations',
+    description: 'Transform your space with complete remodeling services from kitchens to whole-home renovations.',
+    features: ['Kitchen remodels', 'Bathroom upgrades', 'Whole-home renovations', 'Space planning']
   },
   {
-    title: 'Interior Finishing',
-    description: 'Complete interior finishing services to make your house feel like home.',
-    features: ['Custom cabinetry', 'Flooring installation', 'Trim and molding', 'Paint and drywall']
+    title: 'Flooring Installation & Repair',
+    description: 'Professional flooring services for all types including carpet, tile, and luxury vinyl plank.',
+    features: ['Carpet installation', 'Tile work', 'LVP installation', 'Flooring repair']
+  },
+  {
+    title: 'Painting Services',
+    description: 'Quality interior and exterior painting to refresh and protect your home.',
+    features: ['Interior painting', 'Exterior painting', 'Color consultation', 'Surface preparation']
+  },
+  {
+    title: 'Outdoor Living Spaces',
+    description: 'Create beautiful outdoor living areas perfect for entertaining and relaxation.',
+    features: ['Patios & decks', 'Pergolas', 'Outdoor kitchens', 'Custom designs']
   }
 ]
 
-const commercialServices = [
+const additionalServices = [
   {
-    title: 'Office Build-Outs',
-    description: 'Create professional, functional workspaces tailored to your business needs.',
-    features: ['Open floor plans', 'Private offices', 'Conference rooms', 'Break areas']
+    title: 'Concrete Work',
+    description: 'Professional concrete services for driveways, patios, and more.',
+    features: ['Patio installation', 'Driveway repair', 'Concrete slabs', 'Decorative concrete']
   },
   {
-    title: 'Retail Construction',
-    description: 'Build attractive retail spaces that draw customers and drive sales.',
-    features: ['Storefront design', 'Interior layouts', 'Display fixtures', 'ADA compliance']
+    title: 'Drywall & Repairs',
+    description: 'Expert drywall installation and repair for walls and ceilings.',
+    features: ['Drywall repair', 'Texture matching', 'Hole patching', 'Water damage repair']
   },
   {
-    title: 'Restaurant Construction',
-    description: 'Specialized construction for food service establishments with all necessary systems.',
-    features: ['Commercial kitchens', 'Dining areas', 'Bar installations', 'Health code compliance']
+    title: 'Fence Services',
+    description: 'Quality fence repair and replacement for security and privacy.',
+    features: ['Fence repair', 'New installation', 'Gate installation', 'Wood & vinyl fencing']
   },
   {
-    title: 'Warehouse & Industrial',
-    description: 'Durable construction for industrial and warehouse facilities.',
-    features: ['Loading docks', 'Storage systems', 'Office integration', 'Safety features']
+    title: 'Specialty Services',
+    description: 'Additional services to complete your home improvement needs.',
+    features: ['Attic ladders', 'Attic elevators', 'Masonry work', 'Metal gate motor repair']
   }
 ]
 
@@ -64,7 +76,7 @@ export default function ServicesPage() {
             Comprehensive Construction Services
           </h1>
           <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl">
-            From residential dream homes to commercial spaces, we deliver exceptional results on every project.
+            Serving Mansfield and the DFW area since 2005. From small repairs to full renovations—plus 24-hour emergency services.
           </p>
         </div>
       </section>
@@ -78,19 +90,24 @@ export default function ServicesPage() {
             </div>
             <h2 className="section-title">Residential Services</h2>
             <p className="section-subtitle mx-auto">
-              Building and renovating homes throughout the DFW area
+              Quality craftsmanship for your home—with 24-hour emergency services available
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {residentialServices.map((service, index) => (
-              <div key={index} className="card p-8">
+              <div key={index} className="card p-8 relative">
+                {service.emergency && (
+                  <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    24/7 EMERGENCY
+                  </div>
+                )}
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-neutral-600 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <FaCheckCircle className="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <FaCheckCircle className="w-5 h-5 text-forest-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-neutral-700">{feature}</span>
                     </li>
                   ))}
@@ -110,28 +127,28 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Commercial Services */}
+      {/* Additional Services */}
       <section className="py-20 bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-forest-100 text-forest-600 mb-4">
               <FaBuilding className="w-8 h-8" />
             </div>
-            <h2 className="section-title">Commercial Services</h2>
+            <h2 className="section-title">Additional Services</h2>
             <p className="section-subtitle mx-auto">
-              Professional construction solutions for businesses of all sizes
+              Complete home improvement solutions for all your needs
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {commercialServices.map((service, index) => (
+            {additionalServices.map((service, index) => (
               <div key={index} className="card p-8 bg-white">
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-neutral-600 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <FaCheckCircle className="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <FaCheckCircle className="w-5 h-5 text-forest-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-neutral-700">{feature}</span>
                     </li>
                   ))}

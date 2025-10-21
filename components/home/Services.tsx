@@ -1,41 +1,43 @@
 import Link from 'next/link'
-import { FaHome, FaBuilding, FaTools, FaPaintRoller, FaHardHat, FaWarehouse } from 'react-icons/fa'
+import { FaHome, FaTools, FaPaintRoller, FaHammer, FaTree, FaDoorOpen } from 'react-icons/fa'
 
 const services = [
   {
     icon: FaHome,
-    title: 'Custom Home Building',
-    description: 'Build your dream home from the ground up with personalized design and expert craftsmanship.',
-    link: '/services'
+    title: 'Roofing & Emergency Tarping',
+    description: '24-hour emergency roofing tarping and complete roofing services for repairs and replacements.',
+    link: '/services',
+    emergency: true
+  },
+  {
+    icon: FaDoorOpen,
+    title: 'Garage Door Services',
+    description: '24-hour emergency garage door repair and replacement, plus metal gate motor repair.',
+    link: '/services',
+    emergency: true
   },
   {
     icon: FaTools,
-    title: 'Home Renovations',
-    description: 'Transform your existing space with comprehensive renovation services for kitchens, baths, and more.',
+    title: 'Remodeling & Renovations',
+    description: 'Complete remodeling services from kitchens to bathrooms and whole-home transformations.',
     link: '/services'
   },
   {
     icon: FaPaintRoller,
-    title: 'Home Additions',
-    description: 'Expand your living space with seamless additions that match your home\'s existing style.',
+    title: 'Painting & Flooring',
+    description: 'Interior and exterior painting plus flooring installation including carpet, tile, and LVP.',
     link: '/services'
   },
   {
-    icon: FaBuilding,
-    title: 'Commercial Construction',
-    description: 'Professional construction solutions for offices, retail spaces, and commercial properties.',
+    icon: FaTree,
+    title: 'Outdoor Living Spaces',
+    description: 'Create beautiful outdoor spaces with patios, decks, pergolas, and outdoor kitchens.',
     link: '/services'
   },
   {
-    icon: FaHardHat,
-    title: 'Office Build-Outs',
-    description: 'Create functional, inspiring workspaces tailored to your business needs.',
-    link: '/services'
-  },
-  {
-    icon: FaWarehouse,
-    title: 'Retail & Industrial',
-    description: 'Specialized construction for retail stores, restaurants, and warehouse facilities.',
+    icon: FaHammer,
+    title: 'Concrete & More',
+    description: 'Concrete work, drywall repair, fence services, masonry, and specialty installations.',
     link: '/services'
   }
 ]
@@ -47,7 +49,7 @@ export default function Services() {
         <div className="text-center mb-16">
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle mx-auto">
-            Comprehensive construction solutions for residential and commercial projects
+            Quality craftsmanship for homes throughout Mansfield and the DFW area—including 24-hour emergency services
           </p>
         </div>
 
@@ -55,8 +57,13 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="card p-8 hover:scale-105 transition-transform duration-300 group"
+              className="card p-8 hover:scale-105 transition-transform duration-300 group relative"
             >
+              {service.emergency && (
+                <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                  24/7
+                </div>
+              )}
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-forest-100 to-accent-100 text-forest-600 mb-6 group-hover:bg-gradient-to-br group-hover:from-forest-500 group-hover:to-accent-500 group-hover:text-white transition-all duration-300">
                 <service.icon className="w-8 h-8" />
               </div>

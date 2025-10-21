@@ -16,9 +16,11 @@ export default function CTA() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Ready to Start Your Construction Project?
           </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-12">
-            Let's bring your vision to life. Contact us today for a free consultation and discover 
-            why we're the trusted choice for construction in the DFW area.
+          <p className="text-xl md:text-2xl text-white/90 mb-4">
+            Let's bring your vision to life. BBB A+ rated and referral-only—serving Mansfield and the DFW area since 2005.
+          </p>
+          <p className="text-lg text-white/80 mb-12">
+            🚨 24-hour emergency roofing tarping and garage door services available
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -44,12 +46,12 @@ export default function CTA() {
               <p className="text-white/80">No obligation project assessments</p>
             </div>
             <div>
-              <div className="text-2xl font-bold mb-2">Flexible Financing</div>
-              <p className="text-white/80">Payment plans to fit your budget</p>
+              <div className="text-2xl font-bold mb-2">24/7 Emergency Service</div>
+              <p className="text-white/80">Roofing tarping & garage door repair</p>
             </div>
             <div>
-              <div className="text-2xl font-bold mb-2">Fast Response</div>
-              <p className="text-white/80">We respond within 24 hours</p>
+              <div className="text-2xl font-bold mb-2">Real Estate Trusted</div>
+              <p className="text-white/80">Flexible payment options available</p>
             </div>
           </div>
         </div>

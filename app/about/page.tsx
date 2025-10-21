@@ -31,20 +31,21 @@ export default function AboutPage() {
               <h2 className="section-title">Our Story</h2>
               <div className="space-y-4 text-lg text-neutral-700">
                 <p>
-                  Founded in 2005, Teton Construction Services has been serving the greater DFW area 
-                  with a commitment to quality craftsmanship and exceptional customer service. Based in 
-                  Mansfield, TX, we've built our reputation one satisfied customer at a time.
+                  Founded in 2005, Teton Construction Services has been serving Mansfield and the greater DFW area 
+                  with a commitment to quality craftsmanship and exceptional customer service. We've built our 
+                  reputation one satisfied customer at a time, becoming a trusted local general contractor.
                 </p>
                 <p>
-                  What started as a small residential contractor has grown into a trusted name in both 
-                  residential and commercial construction. Our growth is a testament to our dedication 
-                  to excellence and the strong relationships we've built with our clients and real estate 
-                  partners throughout the years.
+                  As a referral-only contractor with an A+ BBB rating, we take pride in earning the trust of every 
+                  client. We've established strong partnerships with several real estate professionals who trust us 
+                  with their clients' construction needs. Our flexible approach includes the ability to work with 
+                  upfront costs and receive payment via wire upon closing, depending on the situation.
                 </p>
                 <p>
-                  As a referral-only contractor, we take pride in earning the trust of every client. 
-                  Our A+ BBB rating reflects our commitment to integrity, transparency, and delivering 
-                  projects that exceed expectations.
+                  What truly sets us apart is our dedicated team of 7 employees who work exclusively for us. This 
+                  ensures consistent quality, reliability, and accountability on every project. Whether it's a small 
+                  repair or a full renovation, our experienced team delivers reliable, high-quality results—on time 
+                  and on budget.
                 </p>
               </div>
             </div>
@@ -129,11 +130,17 @@ export default function AboutPage() {
               </p>
             </div>
             
-            <div className="p-8 border-l-4 border-primary-600 bg-neutral-50">
+            <div className="p-8 border-l-4 border-forest-500 bg-neutral-50">
+              <h3 className="text-2xl font-bold mb-4">24-Hour Emergency Services</h3>
+              <p className="text-neutral-700">
+                We provide 24-hour emergency roofing tarping and garage door repair services. When disaster strikes, we're ready to help—day or night.
+              </p>
+            </div>
+            
+            <div className="p-8 border-l-4 border-forest-500 bg-neutral-50">
               <h3 className="text-2xl font-bold mb-4">Flexible Payment Options</h3>
               <p className="text-neutral-700">
-                We offer flexible payment arrangements, including the option for payment upon 
-                closing for real estate transactions.
+                We offer flexible payment arrangements, including the ability to work with upfront costs and payment upon closing for real estate transactions.
               </p>
             </div>
           </div>
@@ -146,9 +153,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { number: '20+', label: 'Years in Business' },
-              { number: '500+', label: 'Projects Completed' },
+              { number: '24/7', label: 'Emergency Service' },
               { number: 'A+', label: 'BBB Rating' },
-              { number: '100%', label: 'Client Satisfaction' }
+              { number: '7', label: 'Dedicated Team Members' }
             ].map((stat, index) => (
               <div key={index}>
                 <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>

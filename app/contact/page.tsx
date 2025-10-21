@@ -4,7 +4,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Teton Construction Services. We\'re here to discuss your residential or commercial construction project.',
+  description: 'Contact Teton Construction Services in Mansfield, TX. 24-hour emergency services available. Call (972) 824-9066 for emergency roofing tarping or garage door repair.',
 }
 
 export default function ContactPage() {
@@ -17,9 +17,12 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl">
-            Ready to start your project? We'd love to hear from you. Contact us today for a consultation.
+          <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl mb-6">
+            Ready to start your project? Need emergency services? We're here to help 24/7.
           </p>
+          <div className="inline-block bg-red-500 text-white px-6 py-3 rounded-lg">
+            <p className="text-lg font-bold">🚨 24-Hour Emergency: (972) 824-9066</p>
+          </div>
         </div>
       </section>
 
@@ -31,8 +34,9 @@ export default function ContactPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Let's Discuss Your Project</h2>
               <p className="text-lg text-neutral-600 mb-8">
-                Whether you're planning a home renovation, building a custom home, or need commercial 
-                construction services, we're here to help. Reach out to us using any of the methods below.
+                Whether it's a small repair, full renovation, or an emergency situation—we're here to help. 
+                Our 24-hour emergency services include roofing tarping and garage door repair. 
+                Reach out to us using any of the methods below.
               </p>
 
               <div className="space-y-6 mb-12">

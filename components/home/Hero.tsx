@@ -32,10 +32,18 @@ export default function Hero() {
             Delivering Excellence
           </h1>
           
-          <p className="text-xl md:text-2xl text-neutral-200 mb-8 max-w-2xl">
-            Premier residential and commercial construction services in the DFW area. 
-            Trusted by homeowners and real estate professionals for over 20 years.
+          <p className="text-xl md:text-2xl text-neutral-200 mb-4 max-w-2xl">
+            Serving Mansfield and the DFW area since 2005. Referral-only general contractor trusted by homeowners and real estate professionals.
           </p>
+          
+          <div className="bg-red-500 text-white px-6 py-4 rounded-lg mb-8 max-w-2xl inline-block">
+            <p className="text-lg md:text-xl font-bold">
+              🚨 24-Hour Emergency Services Available
+            </p>
+            <p className="text-sm md:text-base">
+              Emergency roofing tarping & garage door repair
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white bg-gradient-to-r from-forest-500 to-accent-600 hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-xl hover:shadow-2xl">
@@ -53,12 +61,12 @@ export default function Hero() {
               <div className="text-neutral-300">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-neutral-300">Projects Completed</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-neutral-300">Emergency Service</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">A+</div>
-              <div className="text-neutral-300">BBB Rating</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">7</div>
+              <div className="text-neutral-300">Dedicated Team Members</div>
             </div>
           </div>
         </div>

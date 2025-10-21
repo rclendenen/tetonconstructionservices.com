@@ -2,14 +2,14 @@ import Image from 'next/image'
 import { FaCheckCircle } from 'react-icons/fa'
 
 const benefits = [
+  '24-hour emergency roofing tarping and garage door services',
+  'Dedicated team of 7 employees who work exclusively for us',
+  'BBB A+ Rated since 2005—referral-only service',
   'Flexible payment arrangements including payment upon closing',
-  'Direct communication with project managers',
+  'Trusted by multiple real estate partners and their clients',
   'Quality materials and skilled craftsmanship',
-  'On-time project completion',
-  'Transparent pricing with no hidden fees',
-  'Strong relationships with real estate professionals',
-  'Comprehensive warranty on all work',
-  'Local DFW company with deep community roots'
+  'On-time project completion and transparent pricing',
+  'Local Mansfield company serving the DFW area'
 ]
 
 export default function WhyChooseUs() {
@@ -44,8 +44,8 @@ export default function WhyChooseUs() {
 
             <div className="mt-8 p-6 bg-gradient-to-r from-forest-50 to-accent-50 rounded-lg border-l-4 border-forest-500">
               <p className="text-lg font-medium text-neutral-900">
-                "We don't just build structures – we build lasting relationships with our clients 
-                and partners. Your satisfaction is our success."
+                "Whether it's a small repair or a full renovation, our experienced team delivers reliable, 
+                high-quality results—on time and on budget."
               </p>
             </div>
           </div>
