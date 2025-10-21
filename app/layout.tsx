@@ -33,11 +33,20 @@ export const metadata: Metadata = {
     siteName: 'Teton Construction Services',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/logo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Teton Construction Services Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Teton Construction Services | DFW General Contractor',
     description: 'A+ BBB Rated general contractor serving the DFW area since 2005.',
+    images: ['/logo.jpg'],
   },
   robots: {
     index: true,
