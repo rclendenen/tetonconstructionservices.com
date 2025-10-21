@@ -1,4 +1,4 @@
-import { FaAward, FaHandshake, FaShieldAlt, FaUsers } from 'react-icons/fa'
+import { FaAward, FaHandshake, FaUsers, FaClock } from 'react-icons/fa'
 
 const badges = [
   {
@@ -13,10 +13,9 @@ const badges = [
     description: 'Trusted by satisfied clients and real estate partners'
   },
   {
-    icon: FaShieldAlt,
-    title: 'BBB A+ Rated',
-    description: 'A+ rating with the Better Business Bureau since 2005',
-    link: 'https://www.bbb.org/us/tx/mansfield/profile/construction/teton-construction-services-0825-1000187435'
+    icon: FaClock,
+    title: '24/7 Emergency Service',
+    description: 'Available anytime for roofing tarping and garage door repair'
   },
   {
     icon: FaUsers,
