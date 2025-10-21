@@ -50,9 +50,9 @@ const testimonials = [
 
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const [currentIndex, setCurrentIndex] = useState<number>(0)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const scrollToIndex = (index: number): void => {
+  const scrollToIndex = (index: number) => {
     if (scrollRef.current) {
       const scrollWidth = scrollRef.current.scrollWidth
       const scrollPosition = (scrollWidth / testimonials.length) * index
@@ -81,11 +81,8 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Mobile: Swipeable carousel, Tablet/Desktop: Grid */}
         <div className="relative">
-          {/* Mobile Carousel - Swipe through */}
           <div className="lg:hidden">
-            {/* Navigation Arrows */}
             <button
               onClick={scrollLeft}
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg"
@@ -103,34 +100,44 @@ export default function Testimonials() {
 
             <div 
               ref={scrollRef}
-              className="overflow-x-auto snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" 
+              className="overflow-x-auto snap-x snap-mandatory pb-4"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
+              <style jsx>{`
+                div {
+                  -ms-overflow-style: none;
+                  scrollbar-width: none;
+                }
+                div::-webkit-scrollbar {
+                  display: none;
+                }
+              `}</style>
               <div className="flex gap-4 px-4">
                 {testimonials.map((testimonial, index) => (
-                <div key={index} className="snap-center flex-shrink-0 w-[85vw] md:w-[45vw]">
-                  <div className="card p-6 bg-white h-full">
-                    <div className="flex items-center mb-3">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <FaStar key={i} className="w-4 h-4 text-yellow-400" />
-                      ))}
-                    </div>
-                    
-                    <FaQuoteLeft className="w-6 h-6 text-primary-200 mb-3" />
-                    
-                    <p className="text-neutral-700 mb-4 italic text-sm">
-                      "{testimonial.text}"
-                    </p>
-                    
-                    <div className="pt-3 border-t border-neutral-200">
-                      <p className="font-bold text-neutral-900 text-sm">{testimonial.name}</p>
-                      <p className="text-xs text-forest-600 font-medium mt-1">{testimonial.project}</p>
+                  <div key={index} className="snap-center flex-shrink-0 w-[85vw] md:w-[45vw]">
+                    <div className="card p-6 bg-white h-full">
+                      <div className="flex items-center mb-3">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <FaStar key={i} className="w-4 h-4 text-yellow-400" />
+                        ))}
+                      </div>
+                      
+                      <FaQuoteLeft className="w-6 h-6 text-primary-200 mb-3" />
+                      
+                      <p className="text-neutral-700 mb-4 italic text-sm">
+                        &quot;{testimonial.text}&quot;
+                      </p>
+                      
+                      <div className="pt-3 border-t border-neutral-200">
+                        <p className="font-bold text-neutral-900 text-sm">{testimonial.name}</p>
+                        <p className="text-xs text-forest-600 font-medium mt-1">{testimonial.project}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           
-            {/* Carousel Dots */}
             <div className="flex justify-center gap-2 mt-4">
               {testimonials.map((_, index) => (
                 <button
@@ -145,7 +152,6 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Desktop Grid - Show 3 at once */}
           <div className="hidden lg:grid lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="card p-6 bg-white">
@@ -158,7 +164,7 @@ export default function Testimonials() {
                 <FaQuoteLeft className="w-6 h-6 text-primary-200 mb-3" />
                 
                 <p className="text-neutral-700 mb-4 italic text-sm">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 
                 <div className="pt-3 border-t border-neutral-200">
@@ -199,4 +205,3 @@ export default function Testimonials() {
     </section>
   )
 }
-
