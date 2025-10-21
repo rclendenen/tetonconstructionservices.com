@@ -114,13 +114,18 @@ export default function AboutPage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 border-l-4 border-primary-600 bg-neutral-50">
+            <a
+              href="https://www.bbb.org/us/tx/mansfield/profile/construction/teton-construction-services-0825-1000187435"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-8 border-l-4 border-primary-600 bg-neutral-50 hover:bg-neutral-100 transition-colors duration-200 block"
+            >
               <h3 className="text-2xl font-bold mb-4">A+ BBB Rating</h3>
               <p className="text-neutral-700">
                 Our A+ rating with the Better Business Bureau demonstrates our commitment to 
                 ethical business practices and customer satisfaction.
               </p>
-            </div>
+            </a>
             
             <div className="p-8 border-l-4 border-primary-600 bg-neutral-50">
               <h3 className="text-2xl font-bold mb-4">Referral-Only Service</h3>

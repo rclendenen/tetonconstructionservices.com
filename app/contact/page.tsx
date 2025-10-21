@@ -99,7 +99,14 @@ export default function ContactPage() {
                 <ul className="space-y-2 text-neutral-700">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
-                    A+ BBB Rating
+                    <a
+                      href="https://www.bbb.org/us/tx/mansfield/profile/construction/teton-construction-services-0825-1000187435"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary-600 transition-colors duration-200 underline"
+                    >
+                      A+ BBB Rating
+                    </a>
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
