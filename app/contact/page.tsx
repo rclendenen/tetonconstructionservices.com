@@ -58,8 +58,8 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <a href="mailto:teton@tetonconstructionservices.com" className="text-neutral-600 hover:text-primary-600 transition-colors">
-                      teton@tetonconstructionservices.com
+                    <a href="mailto:info@tetonconstructionservices.com" className="text-neutral-600 hover:text-primary-600 transition-colors">
+                      info@tetonconstructionservices.com
                     </a>
                   </div>
                 </div>

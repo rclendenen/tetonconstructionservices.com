@@ -46,7 +46,7 @@ export async function POST(req: Request) {
       return Response.json({ ok: true }, { status: 200 })
     }
 
-    const toAddress = process.env.CONTACT_TO_EMAIL || 'teton@tetonconstructionservices.com'
+    const toAddress = process.env.CONTACT_TO_EMAIL || 'info@tetonconstructionservices.com'
 
     const host = process.env.SMTP_HOST
     const port = Number(process.env.SMTP_PORT || '587')
