@@ -2,6 +2,14 @@ import nodemailer from 'nodemailer'
 
 export const runtime = 'nodejs'
 
+type NodemailerError = {
+  code?: string
+  command?: string
+  responseCode?: number
+  response?: string
+  message?: string
+}
+
 type ContactPayload = {
   name: string
   email: string
@@ -72,6 +80,9 @@ export async function POST(req: Request) {
       requireTLS: port === 587,
     })
 
+    // Fail fast with a clearer error if SMTP credentials/connection are rejected
+    await transporter.verify()
+
     const subject = `New website inquiry — ${projectType}`
     const text = [
       'New contact form submission:',
@@ -95,7 +106,30 @@ export async function POST(req: Request) {
 
     return Response.json({ ok: true }, { status: 200 })
   } catch (err) {
-    return Response.json({ ok: false, error: 'Failed to send message.' }, { status: 500 })
+    const e = err as NodemailerError
+    const code = e.code || (typeof e.responseCode === 'number' ? `SMTP_${e.responseCode}` : 'UNKNOWN')
+
+    // Log full error to Vercel function logs (no secrets included by Nodemailer)
+    console.error('Contact email failed', {
+      code: e.code,
+      command: e.command,
+      responseCode: e.responseCode,
+      message: e.message,
+      response: e.response,
+    })
+
+    let hint = 'Check SMTP settings in Vercel environment variables.'
+    if (code === 'EAUTH' || code === 'SMTP_535') {
+      hint =
+        'SMTP authentication failed. Verify SMTP_USER/SMTP_PASS, and ensure SMTP AUTH is allowed for this Microsoft 365 mailbox.'
+    } else if (code === 'ETIMEDOUT' || code === 'ECONNECTION') {
+      hint = 'SMTP connection failed. Verify SMTP_HOST/SMTP_PORT and that the provider allows SMTP from Vercel.'
+    }
+
+    return Response.json(
+      { ok: false, error: 'Failed to send message.', code, hint },
+      { status: 500 }
+    )
   }
 }
 
