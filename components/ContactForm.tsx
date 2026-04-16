@@ -23,27 +23,44 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID
+    if (!formId?.trim()) {
+      setSubmitStatus('error')
+      setErrorMessage(
+        'Contact form is not configured. Add NEXT_PUBLIC_FORMSPREE_FORM_ID in Vercel (your Formspree form ID).'
+      )
+      return
+    }
+
     setIsSubmitting(true)
     setSubmitStatus('idle')
     setErrorMessage('')
-    
+
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(`https://formspree.io/f/${formId.trim()}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          projectType: formData.projectType,
+          message: formData.message,
+          _subject: `Website inquiry: ${formData.projectType}`,
+        }),
       })
 
-      const data = (await res.json().catch(() => ({}))) as {
-        ok?: boolean
-        error?: string
-        hint?: string
-        code?: string
-      }
+      const data = (await res.json().catch(() => ({}))) as { error?: string; errors?: unknown }
 
-      if (!res.ok || !data.ok) {
-        const detail = [data.error, data.hint].filter(Boolean).join(' ')
-        throw new Error(detail || 'Failed to send message.')
+      if (!res.ok) {
+        const msg =
+          typeof data.error === 'string'
+            ? data.error
+            : 'Could not send your message. Please try again or call us.'
+        throw new Error(msg)
       }
 
       setSubmitStatus('success')
