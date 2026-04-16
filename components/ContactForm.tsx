@@ -23,14 +23,9 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID
-    if (!formId?.trim()) {
-      setSubmitStatus('error')
-      setErrorMessage(
-        'Contact form is not configured. Add NEXT_PUBLIC_FORMSPREE_FORM_ID in Vercel (your Formspree form ID).'
-      )
-      return
-    }
+    // Public Formspree form id (override with NEXT_PUBLIC_FORMSPREE_FORM_ID in Vercel if you create a new form)
+    const formId =
+      process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID?.trim() || 'xdayepvw'
 
     setIsSubmitting(true)
     setSubmitStatus('idle')
