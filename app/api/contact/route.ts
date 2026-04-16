@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer'
 
+export const runtime = 'nodejs'
+
 type ContactPayload = {
   name: string
   email: string
@@ -45,8 +47,19 @@ export async function POST(req: Request) {
     const from = process.env.SMTP_FROM || user
 
     if (!host || !user || !pass || !from) {
+      const missing: string[] = []
+      if (!host) missing.push('SMTP_HOST')
+      if (!process.env.SMTP_PORT) missing.push('SMTP_PORT')
+      if (!user) missing.push('SMTP_USER')
+      if (!pass) missing.push('SMTP_PASS')
+      if (!from) missing.push('SMTP_FROM')
+
       return Response.json(
-        { ok: false, error: 'Email service is not configured.' },
+        {
+          ok: false,
+          error: 'Email service is not configured.',
+          missing,
+        },
         { status: 500 }
       )
     }
