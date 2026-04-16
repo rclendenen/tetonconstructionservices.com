@@ -1,3 +1,4 @@
+import { Resend } from 'resend'
 import nodemailer from 'nodemailer'
 
 export const runtime = 'nodejs'
@@ -48,6 +49,51 @@ export async function POST(req: Request) {
 
     const toAddress = process.env.CONTACT_TO_EMAIL || 'info@tetonconstructionservices.com'
 
+    const subject = `New website inquiry — ${projectType}`
+    const text = [
+      'New contact form submission:',
+      '',
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      `Project Type: ${projectType}`,
+      '',
+      'Message:',
+      message,
+    ].join('\n')
+
+    // Resend (recommended): no mailbox password — works when Microsoft 365 has MFA and SMTP login fails.
+    if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY)
+      const from =
+        process.env.RESEND_FROM ||
+        'Teton Construction Website <onboarding@resend.dev>'
+
+      const { error } = await resend.emails.send({
+        from,
+        to: toAddress,
+        subject,
+        text,
+        replyTo: email,
+      })
+
+      if (error) {
+        console.error('Resend send failed', error)
+        return Response.json(
+          {
+            ok: false,
+            error: 'Failed to send message.',
+            hint:
+              'Check RESEND_API_KEY. Add your domain in Resend and set RESEND_FROM to an address on that domain (e.g. website@tetonconstructionservices.com).',
+            code: 'RESEND',
+          },
+          { status: 500 }
+        )
+      }
+
+      return Response.json({ ok: true }, { status: 200 })
+    }
+
     const host = process.env.SMTP_HOST
     const port = Number(process.env.SMTP_PORT || '587')
     const user = process.env.SMTP_USER
@@ -82,19 +128,6 @@ export async function POST(req: Request) {
 
     // Fail fast with a clearer error if SMTP credentials/connection are rejected
     await transporter.verify()
-
-    const subject = `New website inquiry — ${projectType}`
-    const text = [
-      'New contact form submission:',
-      '',
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone}`,
-      `Project Type: ${projectType}`,
-      '',
-      'Message:',
-      message,
-    ].join('\n')
 
     await transporter.sendMail({
       from,

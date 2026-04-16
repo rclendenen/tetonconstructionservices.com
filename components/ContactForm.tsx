@@ -34,10 +34,16 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       })
 
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string }
+      const data = (await res.json().catch(() => ({}))) as {
+        ok?: boolean
+        error?: string
+        hint?: string
+        code?: string
+      }
 
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || 'Failed to send message.')
+        const detail = [data.error, data.hint].filter(Boolean).join(' ')
+        throw new Error(detail || 'Failed to send message.')
       }
 
       setSubmitStatus('success')
