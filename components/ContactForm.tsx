@@ -12,6 +12,7 @@ export default function ContactForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -23,17 +24,34 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
+    setErrorMessage('')
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string }
+
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Failed to send message.')
+      }
+
       setSubmitStatus('success')
       setFormData({ name: '', email: '', phone: '', projectType: '', message: '' })
-      
+
       setTimeout(() => {
         setSubmitStatus('idle')
       }, 5000)
-    }, 1000)
+    } catch (err) {
+      setSubmitStatus('error')
+      setErrorMessage(err instanceof Error ? err.message : 'Failed to send message.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -136,7 +154,7 @@ export default function ContactForm() {
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-50 border border-red-200 rounded-md">
           <p className="text-red-800 text-sm">
-            Sorry, there was an error submitting your form. Please try again or call us directly.
+            {errorMessage || 'Sorry, there was an error submitting your form. Please try again or call us directly.'}
           </p>
         </div>
       )}
