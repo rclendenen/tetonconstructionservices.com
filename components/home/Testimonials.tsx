@@ -85,14 +85,14 @@ export default function Testimonials() {
           <div className="lg:hidden">
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Previous review"
             >
               <FaChevronLeft className="w-4 h-4 text-forest-600" />
             </button>
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Next review"
             >
               <FaChevronRight className="w-4 h-4 text-forest-600" />
@@ -109,7 +109,7 @@ export default function Testimonials() {
             >
               <div className="flex gap-4 px-4">
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="snap-center flex-shrink-0 w-[85vw] md:w-[45vw]">
+                  <div key={index} className="snap-center flex-shrink-0 w-[85vw] md:w-[45vw] lg:w-auto">
                     <div className="card p-6 bg-white h-full">
                       <div className="flex items-center mb-3">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -138,8 +138,8 @@ export default function Testimonials() {
                 <button
                   key={index}
                   onClick={() => scrollToIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? 'bg-forest-600 w-6' : 'bg-neutral-300'
+                  className={`h-2 rounded-full transition-all min-w-[20px] min-h-[20px] ${
+                    index === currentIndex ? 'bg-forest-600 w-6' : 'bg-neutral-300 w-2'
                   }`}
                   aria-label={`Go to review ${index + 1}`}
                 />
@@ -191,7 +191,7 @@ export default function Testimonials() {
             href="https://www.google.com/search?q=teton+construction+services+mansfield+tx"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-forest-500 to-accent-600 text-white text-base md:text-lg font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-forest-500 to-accent-600 text-white text-base md:text-lg font-medium rounded-lg hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-lg hover:shadow-xl min-h-[44px]"
           >
             Leave a Review
           </a>

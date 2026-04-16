@@ -71,7 +71,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 icon: FaAward,
@@ -113,7 +113,7 @@ export default function AboutPage() {
             <h2 className="section-title">What Sets Us Apart</h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <a
               href="https://www.bbb.org/us/tx/mansfield/profile/construction/teton-construction-services-0825-1000187435"
               target="_blank"
@@ -178,7 +178,7 @@ export default function AboutPage() {
           <p className="section-subtitle mx-auto mb-8">
             Let's discuss how we can bring your vision to life with quality craftsmanship and exceptional service.
           </p>
-          <a href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary min-h-[44px]">
             Get in Touch
           </a>
         </div>

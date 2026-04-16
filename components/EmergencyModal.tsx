@@ -75,7 +75,7 @@ export default function EmergencyModal() {
           {isMobile ? (
             <a
               href="tel:+19728249066"
-              className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg font-bold rounded-lg hover:from-red-700 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg font-bold rounded-lg hover:from-red-700 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl min-h-[44px]"
             >
               <FaPhone className="w-5 h-5 mr-3" />
               Call Us Now
@@ -85,7 +85,7 @@ export default function EmergencyModal() {
               {!showNumber ? (
                 <button
                   onClick={handleButtonClick}
-                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg font-bold rounded-lg hover:from-red-700 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg font-bold rounded-lg hover:from-red-700 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl min-h-[44px]"
                 >
                   <FaPhone className="w-5 h-5 mr-3" />
                   Call Us Now
@@ -93,10 +93,10 @@ export default function EmergencyModal() {
               ) : (
                 <a
                   href="tel:+19728249066"
-                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg font-bold rounded-lg hover:from-red-700 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg font-bold rounded-lg hover:from-red-700 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl min-h-[44px]"
                 >
                   <FaPhone className="w-5 h-5 mr-3" />
-                  (972) 824-9066
+                  <span className="whitespace-nowrap">(972) 824-9066</span>
                 </a>
               )}
             </>
@@ -104,7 +104,7 @@ export default function EmergencyModal() {
           
           <button
             onClick={() => setIsOpen(false)}
-            className="w-full text-neutral-600 hover:text-neutral-800 transition-colors text-sm font-medium"
+            className="w-full text-neutral-600 hover:text-neutral-800 transition-colors text-sm font-medium py-2 min-h-[44px]"
           >
             Maybe later
           </button>

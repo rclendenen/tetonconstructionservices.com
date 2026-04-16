@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-white">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
             <div className="mb-4">
@@ -27,7 +27,7 @@ export default function Footer() {
                 href="https://www.facebook.com/profile.php?id=100049266175557" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors"
+                className="w-11 h-11 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors min-w-[44px] min-h-[44px]"
                 aria-label="Visit our Facebook page"
               >
                 <FaFacebookF className="w-5 h-5" />
@@ -36,12 +36,12 @@ export default function Footer() {
                 href="https://nextdoor.com/pages/teton-construction-mansfield-tx/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors"
+                className="w-11 h-11 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors min-w-[44px] min-h-[44px]"
                 aria-label="Visit our Nextdoor page"
               >
                 <SiNextdoor className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors">
+              <a href="#" className="w-11 h-11 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-forest-500 transition-colors min-w-[44px] min-h-[44px]">
                 <FaInstagram className="w-5 h-5" />
               </a>
             </div>
@@ -110,8 +110,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="w-5 h-5 mr-3 text-forest-500 flex-shrink-0" />
-                <a href="mailto:info@tetonconstructionservices.com" className="text-neutral-400 hover:text-white transition-colors">
-                  info@tetonconstructionservices.com
+                <a href="mailto:teton@tetonconstructionservices.com" className="text-neutral-400 hover:text-white transition-colors">
+                  teton@tetonconstructionservices.com
                 </a>
               </li>
             </ul>

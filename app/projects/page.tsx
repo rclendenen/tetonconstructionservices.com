@@ -76,7 +76,7 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="py-20 bg-neutral-50">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <div key={index} className="card group cursor-pointer">
                 <div className="relative h-64 overflow-hidden">
@@ -120,7 +120,7 @@ export default function ProjectsPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { number: '500+', label: 'Projects Completed', description: 'Residential & commercial' },
               { number: '2M+', label: 'Square Feet Built', description: 'Across DFW area' },
@@ -152,7 +152,7 @@ export default function ProjectsPage() {
           <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can bring your vision to life with the same quality and attention to detail.
           </p>
-          <a href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary min-h-[44px]">
             Contact Us Today
           </a>
         </div>

@@ -107,7 +107,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
             {residentialServices.map((service, index) => (
               <div key={index} className="card p-8 relative">
                 {service.emergency && (
@@ -153,7 +153,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
             {commercialServices.map((service, index) => (
               <div key={index} className="card p-8 bg-white">
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
@@ -194,7 +194,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
             {additionalServices.map((service, index) => (
               <div key={index} className="card p-8 bg-white">
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
@@ -232,7 +232,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { step: '01', title: 'Consultation', description: 'We meet to discuss your vision, budget, and timeline.' },
               { step: '02', title: 'Planning', description: 'Detailed plans, permits, and material selection.' },
@@ -260,7 +260,7 @@ export default function ServicesPage() {
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             Contact us today for a consultation and let's bring your vision to life.
           </p>
-          <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-primary-600 transition-all duration-200">
+          <a href="/contact" className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-white text-base sm:text-lg font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-primary-600 transition-all duration-200 min-h-[44px]">
             Get Started
           </a>
         </div>

@@ -70,27 +70,27 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg text-white bg-gradient-to-r from-forest-500 to-accent-600 hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-xl hover:shadow-2xl">
+            <Link href="/contact" className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 text-base sm:text-lg font-medium rounded-lg text-white bg-gradient-to-r from-forest-500 to-accent-600 hover:from-forest-600 hover:to-accent-700 transition-all duration-200 shadow-xl hover:shadow-2xl min-h-[44px]">
               Start Your Project
             </Link>
-            <Link href="/projects" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-neutral-900 transition-all duration-200">
+            <Link href="/projects" className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-white text-base sm:text-lg font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-neutral-900 transition-all duration-200 min-h-[44px]">
               View Our Work
             </Link>
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/20">
+          <div className="grid grid-cols-3 gap-4 md:gap-6 lg:gap-8 mt-12 md:mt-16 pt-12 md:pt-16 border-t border-white/20">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">20+</div>
-              <div className="text-neutral-300">Years Experience</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">20+</div>
+              <div className="text-sm sm:text-base text-neutral-300">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-neutral-300">Emergency Service</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-sm sm:text-base text-neutral-300">Emergency Service</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">7</div>
-              <div className="text-neutral-300">Dedicated Team Members</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">7</div>
+              <div className="text-sm sm:text-base text-neutral-300 leading-tight">Dedicated Team</div>
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -83,7 +83,7 @@ export default function Services() {
         </div>
 
         <div className="text-center mt-8 md:mt-12">
-          <Link href="/services" className="btn-primary">
+          <Link href="/services" className="btn-primary min-h-[44px]">
             View All Services
           </Link>
         </div>

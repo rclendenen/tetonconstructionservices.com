@@ -26,21 +26,21 @@ export default function CTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-forest-600 text-lg font-medium rounded-lg hover:bg-neutral-100 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-forest-600 text-base sm:text-lg font-medium rounded-lg hover:bg-neutral-100 transition-all duration-200 shadow-lg hover:shadow-xl min-h-[44px]"
             >
               <FaEnvelope className="w-5 h-5 mr-2" />
               Request a Quote
             </Link>
             <a
               href="tel:+19728249066"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-forest-600 transition-all duration-200"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-white text-base sm:text-lg font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-forest-600 transition-all duration-200 min-h-[44px]"
             >
               <FaPhone className="w-5 h-5 mr-2" />
-              (972) 824-9066
+              <span className="whitespace-nowrap">(972) 824-9066</span>
             </a>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-white/30">
+          <div className="grid sm:grid-cols-3 gap-6 md:gap-8 pt-12 border-t border-white/30">
             <div>
               <div className="text-2xl font-bold mb-2">Free Consultations</div>
               <p className="text-white/80">No obligation project assessments</p>

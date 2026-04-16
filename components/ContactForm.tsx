@@ -144,7 +144,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>

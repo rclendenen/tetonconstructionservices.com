@@ -30,8 +30,8 @@ export default function WhyChooseUs() {
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="relative h-96 lg:h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="relative h-96 md:h-full min-h-[400px] md:min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
             <div
               style={{
                 transform: `translateY(${(scrollY - 1000) * 0.15}px)`
