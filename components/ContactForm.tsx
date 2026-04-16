@@ -1,79 +1,33 @@
 'use client'
 
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
+
+const DEFAULT_FORMSPREE_ID = 'xdayepvw'
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    projectType: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [errorMessage, setErrorMessage] = useState<string>('')
+  const formId =
+    process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID?.trim() || DEFAULT_FORMSPREE_ID
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+  const [state, handleSubmit] = useForm(formId)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    // Public Formspree form id (override with NEXT_PUBLIC_FORMSPREE_FORM_ID in Vercel if you create a new form)
-    const formId =
-      process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID?.trim() || 'xdayepvw'
-
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-    setErrorMessage('')
-
-    try {
-      const res = await fetch(`https://formspree.io/f/${formId.trim()}`, {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          projectType: formData.projectType,
-          message: formData.message,
-          _subject: `Website inquiry: ${formData.projectType}`,
-        }),
-      })
-
-      const data = (await res.json().catch(() => ({}))) as { error?: string; errors?: unknown }
-
-      if (!res.ok) {
-        const msg =
-          typeof data.error === 'string'
-            ? data.error
-            : 'Could not send your message. Please try again or call us.'
-        throw new Error(msg)
-      }
-
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', phone: '', projectType: '', message: '' })
-
-      setTimeout(() => {
-        setSubmitStatus('idle')
-      }, 5000)
-    } catch (err) {
-      setSubmitStatus('error')
-      setErrorMessage(err instanceof Error ? err.message : 'Failed to send message.')
-    } finally {
-      setIsSubmitting(false)
-    }
+  if (state.succeeded) {
+    return (
+      <div className="p-4 bg-green-50 border border-green-200 rounded-md">
+        <p className="text-green-800 text-sm">
+          Thank you for your message! We&apos;ll get back to you within 24 hours.
+        </p>
+      </div>
+    )
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <input
+        type="hidden"
+        name="_subject"
+        value="Website contact form — tetonconstructionservices.com"
+      />
+
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
           Full Name *
@@ -83,10 +37,13 @@ export default function ContactForm() {
           id="name"
           name="name"
           required
-          value={formData.name}
-          onChange={handleChange}
           className="input-field"
           placeholder="John Doe"
+        />
+        <ValidationError
+          field="name"
+          errors={state.errors}
+          className="text-red-600 text-sm mt-1 block"
         />
       </div>
 
@@ -99,10 +56,13 @@ export default function ContactForm() {
           id="email"
           name="email"
           required
-          value={formData.email}
-          onChange={handleChange}
           className="input-field"
           placeholder="john@example.com"
+        />
+        <ValidationError
+          field="email"
+          errors={state.errors}
+          className="text-red-600 text-sm mt-1 block"
         />
       </div>
 
@@ -115,10 +75,13 @@ export default function ContactForm() {
           id="phone"
           name="phone"
           required
-          value={formData.phone}
-          onChange={handleChange}
           className="input-field"
           placeholder="(817) 555-0123"
+        />
+        <ValidationError
+          field="phone"
+          errors={state.errors}
+          className="text-red-600 text-sm mt-1 block"
         />
       </div>
 
@@ -130,11 +93,12 @@ export default function ContactForm() {
           id="projectType"
           name="projectType"
           required
-          value={formData.projectType}
-          onChange={handleChange}
+          defaultValue=""
           className="input-field"
         >
-          <option value="">Select a project type</option>
+          <option value="" disabled>
+            Select a project type
+          </option>
           <option value="custom-home">Custom Home Building</option>
           <option value="renovation">Home Renovation</option>
           <option value="addition">Home Addition</option>
@@ -143,6 +107,11 @@ export default function ContactForm() {
           <option value="retail">Retail Construction</option>
           <option value="other">Other</option>
         </select>
+        <ValidationError
+          field="projectType"
+          errors={state.errors}
+          className="text-red-600 text-sm mt-1 block"
+        />
       </div>
 
       <div>
@@ -153,36 +122,23 @@ export default function ContactForm() {
           id="message"
           name="message"
           required
-          value={formData.message}
-          onChange={handleChange}
           rows={4}
           className="input-field resize-none"
           placeholder="Tell us about your project..."
         />
+        <ValidationError
+          field="message"
+          errors={state.errors}
+          className="text-red-600 text-sm mt-1 block"
+        />
       </div>
-
-      {submitStatus === 'success' && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-md">
-          <p className="text-green-800 text-sm">
-            Thank you for your message! We'll get back to you within 24 hours.
-          </p>
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-md">
-          <p className="text-red-800 text-sm">
-            {errorMessage || 'Sorry, there was an error submitting your form. Please try again or call us directly.'}
-          </p>
-        </div>
-      )}
 
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={state.submitting}
         className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {state.submitting ? 'Sending...' : 'Send Message'}
       </button>
 
       <p className="text-xs text-neutral-500 text-center">
@@ -191,4 +147,3 @@ export default function ContactForm() {
     </form>
   )
 }
-
