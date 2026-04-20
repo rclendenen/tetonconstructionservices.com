@@ -17,6 +17,7 @@ const projects = [
     images: [
       { src: 'https://i.imgur.com/eBXnCHJ.jpg', label: 'Before' },
       { src: 'https://i.imgur.com/1Y5ihEF.jpg', label: 'After' },
+      { src: 'https://i.imgur.com/8MqK2sY.jpg', label: 'After' },
     ],
     tags: ['Spa-Inspired Bathroom', 'Luxury Bath Upgrade', 'Modern Bathroom Remodel'],
   },

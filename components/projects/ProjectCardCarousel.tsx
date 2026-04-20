@@ -6,6 +6,10 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 export type ProjectImage = { src: string; label?: string }
 
+/** Fixed aspect + contain keeps every card the same size without cropping photos. */
+const mediaFrameClass =
+  'relative w-full aspect-[4/3] overflow-hidden bg-neutral-200'
+
 type ProjectCardCarouselProps = {
   title: string
   category: string
@@ -39,12 +43,12 @@ export default function ProjectCardCarousel({
 
   if (count === 1) {
     return (
-      <div className="relative h-64 overflow-hidden">
+      <div className={mediaFrameClass}>
         <Image
           src={current.src}
           alt={current.label ? `${title} — ${current.label}` : title}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
+          className="object-contain object-center transition-transform duration-300 group-hover:scale-[1.02]"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute top-4 left-4 z-10">
@@ -56,7 +60,7 @@ export default function ProjectCardCarousel({
 
   return (
     <div
-      className="relative h-64 overflow-hidden"
+      className={mediaFrameClass}
       role="region"
       aria-roledescription="carousel"
       aria-label={`${title} photo gallery`}
@@ -77,7 +81,7 @@ export default function ProjectCardCarousel({
           current.label ? `${title} — ${current.label}` : `${title} — photo ${index + 1} of ${count}`
         }
         fill
-        className="object-cover transition-transform duration-300 group-hover:scale-110"
+        className="object-contain object-center transition-transform duration-300 group-hover:scale-[1.02]"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         priority={index === 0}
       />
