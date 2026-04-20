@@ -57,12 +57,19 @@ const projects = [
     tags: ['Attic Ladder Installation', 'Home Access Upgrade', 'Storage Access Improvement'],
   },
   {
-    title: 'Kitchen & Bath Remodel',
+    title: 'Custom Storage Addition',
     category: 'Residential',
     location: 'Mansfield, TX',
-    description: 'Updated kitchen with new cabinets, countertops, and modern appliances plus refreshed bathrooms.',
-    images: [{ src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80' }],
-    tags: ['Remodel', 'Kitchen', 'Bath'],
+    description:
+      'Converted an existing patio into a spacious walk-in pantry with built-in storage solutions, creating a more efficient and organized kitchen layout.',
+    images: [
+      { src: 'https://i.imgur.com/RyUDyA1.jpg', label: 'Before 1' },
+      { src: 'https://i.imgur.com/WH0zdhn.jpg', label: 'Before 2' },
+      { src: 'https://i.imgur.com/0nSvPQV.jpg', label: 'After 1' },
+      { src: 'https://i.imgur.com/ThUdEpk.jpg', label: 'After 2' },
+    ],
+    initialSlideIndex: 2,
+    tags: ['Walk-In Pantry', 'Built-In Storage', 'Kitchen Layout'],
   },
   {
     title: 'Whole Home Renovation',
