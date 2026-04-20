@@ -44,14 +44,17 @@ const projects = [
     tags: ['Bathroom Remodel', 'Master & Guest Bath Renovation', 'Modern Bath Upgrade'],
   },
   {
-    title: 'Home Addition Project',
+    title: 'Attic Ladder Installation',
     category: 'Residential',
     location: 'Mansfield, TX',
-    description: 'Added master suite and updated existing home with fresh paint and modern fixtures.',
+    description:
+      'Professional installation of a durable attic ladder, creating easy and efficient access to attic storage without compromising home design.',
     images: [
-      { src: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80' },
+      { src: 'https://i.imgur.com/gai9TSy.jpg', label: 'Before' },
+      { src: 'https://i.imgur.com/7gGjNRP.jpg', label: 'After 1' },
     ],
-    tags: ['Addition', 'Expansion', 'Remodel'],
+    initialSlideIndex: 1,
+    tags: ['Attic Ladder Installation', 'Home Access Upgrade', 'Storage Access Improvement'],
   },
   {
     title: 'Kitchen & Bath Remodel',
