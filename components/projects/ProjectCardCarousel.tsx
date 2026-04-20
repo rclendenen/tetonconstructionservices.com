@@ -6,9 +6,12 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 export type ProjectImage = { src: string; label?: string }
 
-/** Fixed aspect + contain keeps every card the same size without cropping photos. */
+/**
+ * Fixed height at each breakpoint so every card’s media area matches in shape and size.
+ * Images use object-contain so nothing is cropped; letterboxing matches the neutral background.
+ */
 const mediaFrameClass =
-  'relative w-full aspect-[4/3] overflow-hidden bg-neutral-200'
+  'relative w-full h-[clamp(220px,38vw,360px)] overflow-hidden bg-neutral-100'
 
 type ProjectCardCarouselProps = {
   title: string
