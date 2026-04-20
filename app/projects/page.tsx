@@ -16,9 +16,10 @@ const projects = [
       'Complete bathroom transformation with striking emerald green tile, a contemporary waterfall shower, and high-end finishes throughout.',
     images: [
       { src: 'https://i.imgur.com/eBXnCHJ.jpg', label: 'Before' },
-      { src: 'https://i.imgur.com/1Y5ihEF.jpg', label: 'After' },
-      { src: 'https://i.imgur.com/8MqK2sY.jpg', label: 'After' },
+      { src: 'https://i.imgur.com/1Y5ihEF.jpg', label: 'After 1' },
+      { src: 'https://i.imgur.com/8MqK2sY.jpg', label: 'After 2' },
     ],
+    initialSlideIndex: 1,
     tags: ['Spa-Inspired Bathroom', 'Luxury Bath Upgrade', 'Modern Bathroom Remodel'],
   },
   {
@@ -93,6 +94,7 @@ export default function ProjectsPage() {
                   title={project.title}
                   category={project.category}
                   images={project.images}
+                  initialSlideIndex={project.initialSlideIndex ?? 0}
                 />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{project.title}</h3>

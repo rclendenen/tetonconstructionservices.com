@@ -14,17 +14,21 @@ type ProjectCardCarouselProps = {
   title: string
   category: string
   images: ProjectImage[]
+  /** First slide shown (0-based). Use for before/after galleries so the “after” photo is visible without swiping. */
+  initialSlideIndex?: number
 }
 
 export default function ProjectCardCarousel({
   title,
   category,
   images,
+  initialSlideIndex = 0,
 }: ProjectCardCarouselProps) {
-  const [index, setIndex] = useState(0)
+  const count = images.length
+  const startAt = Math.min(Math.max(0, initialSlideIndex), Math.max(0, count - 1))
+  const [index, setIndex] = useState(startAt)
   const touchStartX = useRef(0)
 
-  const count = images.length
   const current = images[index]!
 
   const go = useCallback(
@@ -83,7 +87,7 @@ export default function ProjectCardCarousel({
         fill
         className="object-contain object-center transition-transform duration-300 group-hover:scale-[1.02]"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        priority={index === 0}
+        priority={index === startAt}
       />
 
       <div className="absolute top-4 left-4 z-10">
