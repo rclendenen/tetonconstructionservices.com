@@ -16,7 +16,6 @@ A modern, responsive website for Teton Construction Services - a premier residen
 - **Framework**: Next.js 14 (React 18)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
 - **Icons**: React Icons
 - **Deployment**: Vercel
 - **Version Control**: GitHub
@@ -70,6 +69,16 @@ teton-construction-services/
 ├── public/              # Static assets
 └── package.json
 ```
+
+## 📚 Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [SETUP-INSTRUCTIONS.md](./SETUP-INSTRUCTIONS.md) | Install Node.js (Windows) and run the dev server |
+| [DEPLOYMENT.md](./DEPLOYMENT.md) | Deploy to Vercel and connect your domain |
+| [NO-NODEJS-DEPLOYMENT.md](./NO-NODEJS-DEPLOYMENT.md) | Deploy using only GitHub and a browser (no local Node) |
+| [TROUBLESHOOTING-VERCEL.md](./TROUBLESHOOTING-VERCEL.md) | Fix common Vercel and build issues |
+| [WEBSITE-OVERVIEW.md](./WEBSITE-OVERVIEW.md) | Detailed site structure and technical inventory |
 
 ## 🚀 Deployment to Vercel
 
@@ -254,7 +263,7 @@ npm run build
 
 ### Image Loading Issues
 
-Ensure all external image domains are added to `next.config.js` under `images.domains`.
+Ensure all external image hosts are allowed in `next.config.js` under `images.remotePatterns`.
 
 ## 📞 Support
 

@@ -466,7 +466,6 @@
 
 **UI Enhancements:**
 - react-icons: 4.12.0 (Icon library)
-- framer-motion: 10.16.16 (Animations)
 
 **Development:**
 - eslint: 8.56.0 (Code linting)
@@ -563,14 +562,12 @@
 - ✅ PWA manifest
 - ✅ Production ready
 
-### Documentation (8 files)
-- ✅ START-HERE.md
-- ✅ QUICK-START.md
-- ✅ SETUP-INSTRUCTIONS.md
-- ✅ GETTING-STARTED.md
-- ✅ DEPLOYMENT.md
+### Documentation (6 files)
 - ✅ README.md
-- ✅ PROJECT-SUMMARY.md
+- ✅ SETUP-INSTRUCTIONS.md
+- ✅ DEPLOYMENT.md
+- ✅ NO-NODEJS-DEPLOYMENT.md
+- ✅ TROUBLESHOOTING-VERCEL.md
 - ✅ WEBSITE-OVERVIEW.md (this file)
 
 ---
@@ -611,5 +608,5 @@
 
 This website is **complete, professional, and ready to launch**. 
 
-Follow **START-HERE.md** to begin! 🚀
+Start with **README.md** for setup and deployment, or **SETUP-INSTRUCTIONS.md** for a detailed Windows install.
 

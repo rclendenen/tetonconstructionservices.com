@@ -107,9 +107,8 @@ npm run dev -- -p 3001
   - Production-ready
 
 ✅ **Complete Documentation**:
-  - README.md - Technical documentation
+  - README.md - Technical documentation and project overview
   - DEPLOYMENT.md - Step-by-step deployment guide
-  - GETTING-STARTED.md - Quick customization guide
   - This file - Setup instructions
 
 ## Next Actions
@@ -117,7 +116,7 @@ npm run dev -- -p 3001
 1. ✅ **Install Node.js** (if not done)
 2. ✅ **Run `npm install`**
 3. ✅ **Run `npm run dev`** to see the site
-4. 📝 **Customize content** (see GETTING-STARTED.md)
+4. 📝 **Customize content** (see README.md — Content Updates)
 5. 🚀 **Deploy to Vercel** (see DEPLOYMENT.md)
 
 ## Quick Customization Checklist
@@ -141,5 +140,5 @@ Before deploying, update these:
 
 ---
 
-**Need help?** All documentation files are in your project folder. Start with `GETTING-STARTED.md` for content updates!
+**Need help?** See **README.md** for content updates and deployment; use **TROUBLESHOOTING-VERCEL.md** for hosting issues.
 
