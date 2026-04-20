@@ -61,6 +61,13 @@ export default function ProjectCardCarousel({
         <div className="absolute top-4 left-4 z-10">
           <span className="badge bg-primary-600 text-white">{category}</span>
         </div>
+        {current.label ? (
+          <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2">
+            <span className="rounded-full bg-black/55 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm">
+              {current.label}
+            </span>
+          </div>
+        ) : null}
       </div>
     )
   }

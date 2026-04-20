@@ -85,12 +85,13 @@ const projects = [
     tags: ['Spray Foam Insulation', 'Commercial Insulation Upgrade', 'Energy Efficiency Improvement'],
   },
   {
-    title: 'Curb Appeal Upgrade',
-    category: 'Residential',
+    title: 'Commercial Stucco Repair',
+    category: 'Commercial',
     location: 'Mansfield, TX',
-    description: 'New landscaping, updated front porch, and fresh paint transformed this traditional home.',
-    images: [{ src: 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80' }],
-    tags: ['Exterior', 'Landscaping', 'Curb Appeal'],
+    description:
+      'Professional repair and restoration of exterior stucco surfaces to improve durability, appearance, and long-term weather protection for the building.',
+    images: [{ src: 'https://i.imgur.com/gYaV5VO.jpg', label: 'During repairs' }],
+    tags: ['Stucco Repair', 'Commercial Exterior Repair', 'Building Restoration'],
   },
 ]
 
