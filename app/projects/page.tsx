@@ -8,12 +8,13 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: 'Suburban Home Renovation',
+    title: 'Luxury Bathroom Renovation',
     category: 'Residential',
     location: 'Mansfield, TX',
-    description: 'Complete renovation of a 2,400 sq ft family home with updated kitchen, baths, and fresh exterior.',
-    image: 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&w=800&q=80',
-    tags: ['Renovation', 'Family Home', 'Remodel']
+    description:
+      'Complete bathroom transformation with striking emerald green tile, a contemporary waterfall shower, and high-end finishes throughout.',
+    image: 'https://i.imgur.com/1Y5ihEF.jpg',
+    tags: ['Spa-Inspired Bathroom', 'Luxury Bath Upgrade', 'Modern Bathroom Remodel']
   },
   {
     title: 'Brick Home Update',
