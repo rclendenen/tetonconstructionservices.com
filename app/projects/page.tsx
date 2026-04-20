@@ -72,12 +72,17 @@ const projects = [
     tags: ['Walk-In Pantry', 'Built-In Storage', 'Kitchen Layout'],
   },
   {
-    title: 'Whole Home Renovation',
-    category: 'Residential',
+    title: 'Commercial Spray Foam Insulation',
+    category: 'Commercial',
     location: 'Mansfield, TX',
-    description: 'Complete interior and exterior refresh with new flooring, paint, and updated fixtures throughout.',
-    images: [{ src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80' }],
-    tags: ['Renovation', 'Full Home', 'Interior'],
+    description:
+      'Installed high-performance spray foam insulation to improve energy efficiency, temperature control, and overall building performance.',
+    images: [
+      { src: 'https://i.imgur.com/PBXun0C.jpg', label: 'Before' },
+      { src: 'https://i.imgur.com/Bz1lQpy.jpg', label: 'After 1' },
+    ],
+    initialSlideIndex: 1,
+    tags: ['Spray Foam Insulation', 'Commercial Insulation Upgrade', 'Energy Efficiency Improvement'],
   },
   {
     title: 'Curb Appeal Upgrade',
