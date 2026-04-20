@@ -1,0 +1,15 @@
+---
+description: Commit and push completed work to origin main
+alwaysApply: true
+---
+
+# Git workflow
+
+When a task changes project files and the user expects that work on GitHub:
+
+1. Run `git status` and stage every intentional change (`git add` the right paths).
+2. Commit with a clear message: `git commit -m "…"`.
+3. Push: `git push origin main`.
+4. Confirm success: working tree clean and `main` matches `origin/main` (or note if push failed, e.g. auth).
+
+Do not end a session with completed edits left unstaged, uncommitted, or unpushed unless the user asked not to commit.
