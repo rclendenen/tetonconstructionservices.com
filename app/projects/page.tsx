@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+
+import ProjectCardCarousel from '@/components/projects/ProjectCardCarousel'
 
 export const metadata: Metadata = {
   title: 'Our Projects',
@@ -13,49 +14,56 @@ const projects = [
     location: 'Mansfield, TX',
     description:
       'Complete bathroom transformation with striking emerald green tile, a contemporary waterfall shower, and high-end finishes throughout.',
-    image: 'https://i.imgur.com/1Y5ihEF.jpg',
-    tags: ['Spa-Inspired Bathroom', 'Luxury Bath Upgrade', 'Modern Bathroom Remodel']
+    images: [
+      { src: 'https://i.imgur.com/eBXnCHJ.jpg', label: 'Before' },
+      { src: 'https://i.imgur.com/1Y5ihEF.jpg', label: 'After' },
+    ],
+    tags: ['Spa-Inspired Bathroom', 'Luxury Bath Upgrade', 'Modern Bathroom Remodel'],
   },
   {
     title: 'Brick Home Update',
     category: 'Residential',
     location: 'Mansfield, TX',
     description: 'Traditional brick home with updated landscaping, new front door, and modern interior finishes.',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80',
-    tags: ['Remodel', 'Brick Home', 'Exterior']
+    images: [
+      { src: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80' },
+    ],
+    tags: ['Remodel', 'Brick Home', 'Exterior'],
   },
   {
     title: 'Home Addition Project',
     category: 'Residential',
     location: 'Mansfield, TX',
     description: 'Added master suite and updated existing home with fresh paint and modern fixtures.',
-    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80',
-    tags: ['Addition', 'Expansion', 'Remodel']
+    images: [
+      { src: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80' },
+    ],
+    tags: ['Addition', 'Expansion', 'Remodel'],
   },
   {
     title: 'Kitchen & Bath Remodel',
     category: 'Residential',
     location: 'Mansfield, TX',
     description: 'Updated kitchen with new cabinets, countertops, and modern appliances plus refreshed bathrooms.',
-    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80',
-    tags: ['Remodel', 'Kitchen', 'Bath']
+    images: [{ src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80' }],
+    tags: ['Remodel', 'Kitchen', 'Bath'],
   },
   {
     title: 'Whole Home Renovation',
     category: 'Residential',
     location: 'Mansfield, TX',
     description: 'Complete interior and exterior refresh with new flooring, paint, and updated fixtures throughout.',
-    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80',
-    tags: ['Renovation', 'Full Home', 'Interior']
+    images: [{ src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80' }],
+    tags: ['Renovation', 'Full Home', 'Interior'],
   },
   {
     title: 'Curb Appeal Upgrade',
     category: 'Residential',
     location: 'Mansfield, TX',
     description: 'New landscaping, updated front porch, and fresh paint transformed this traditional home.',
-    image: 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80',
-    tags: ['Exterior', 'Landscaping', 'Curb Appeal']
-  }
+    images: [{ src: 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80' }],
+    tags: ['Exterior', 'Landscaping', 'Curb Appeal'],
+  },
 ]
 
 export default function ProjectsPage() {
@@ -80,19 +88,11 @@ export default function ProjectsPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <div key={index} className="card group cursor-pointer">
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="badge bg-primary-600 text-white">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
+                <ProjectCardCarousel
+                  title={project.title}
+                  category={project.category}
+                  images={project.images}
+                />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                   <p className="text-primary-600 font-medium mb-3">{project.location}</p>
